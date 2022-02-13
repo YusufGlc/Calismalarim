@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formlar</title>
+</head>
+<body>
+    
+
+<form style="font-size: 20px">
+<table border="1px">
+    <tr>
+        <td style="width: 130px;"><label for="ad">Ad</label></td>
+        <td><input type="text" id="ad"></td>
+    </tr>
+
+    <tr>
+        <td><label for="soyad">Soyad</label></td>
+        <td><input type="text" id="soyad"></td>
+    </tr>
+
+    <tr>
+        <td><label for="yas">Yaş</label></td>
+        <td><input type="number" id="yas" placeholder="Yaşınızı girin"></td>
+    </tr>
+
+    <tr>
+        <td><label for="resim">Resim Ekle</label></td>
+        <td><input type="file" id="resim" ></td>
+    </tr>
+
+    <tr>
+        <td><label for="tc">TC No</label></td>
+        <td><input type="number" id="tc"></td>
+    </tr>
+
+    <tr>
+        <td>Cinsiyet</td>
+        <td>
+            <label for="kadin">K</label>
+            <input type="radio" name="cinsiyet" id="kadin">
+            <label for="erkek">E</label> 
+            <input type="radio" name="cinsiyet" id="erkek">
+        </td>
+    </tr>
+
+    <tr>
+        <td>Yabancı Diller</td>
+        <td>
+            <label for="ing">İngilizce</label>
+            <input type="checkbox" name="checkboxİng" id="ing">
+            <label for="fr">Fransızca</label>
+            <input type="checkbox" name="checkboxFr" id="fr">
+            <label for="jp">Japonca</label>
+            <input type="checkbox" name="checkboxJp" id="jp">
+        </td>
+    </tr>
+
+    <tr>
+        <td><label for="görüş">Görüş</label></td>
+        <td><textarea name="textGorus" id="görüş" cols="24" rows="4" placeholder="GÖRÜŞÜNÜZ BİZİM İÇİN ÖNEMLİ"></textarea></td>
+    </tr>
+    
+    <tr>
+        <td colspan="2">
+            <input style="height: 30px;" type="submit" value="KAYDET">
+            <input style="height: 30px;" type="reset" value="TEMİZLE">
+        </td>
+    </tr>
+
+</table>
+</form>
+
+<br>
+<hr>
+
+<form style="font-size: 20px;">
+<label for="ad2">Adınız:</label>
+<input type="text" id="ad2">
+
+<br><br>
+
+<label for="soyad2">Soyadınız:</label>
+<input type="text" id="soyad2">
+
+<br><br>
+
+<label for="sifre">Şifreniz:</label>
+<input type="text" id="sifre">
+
+<br><br>
+
+Cinsiyetiniz:
+<input type="radio" name="radioCinsiyet2" id="erkek2">
+<label for="erkek2">Erkek</label>
+<input type="radio" name="radioCinsiyet2" id="kadin2">
+<label for="kadin2">Bayan</label>
+
+<br><br>
+
+Bildiğiniz Diller:
+<input type="checkbox" name="checkboxing2" id="ing2">
+<label for="ing2">İngilizce</label>
+<input type="checkbox" name="checkboxAl" id="al">
+<label for="al">Almanca</label>
+<input type="checkbox" name="checkboxFr2" id="fr2">
+<label for="fr2">Fransızca</label>
+
+<br><br>
+
+<label for="il">Yaşadığınız İl:</label>
+<select style="font-size: 17px;" name="il" id="il">
+    <option value="Ankara" selected>Ankara</option>
+    <option value="Antalya">Antalya</option>
+    <option value="İstanbul">İstanbul</option>
+    <option value="İzmir">İzmir</option>
+</select>
+
+<br><br>
+
+<label for="adres">Adresiniz:</label>
+<br>
+<textarea name="adres" id="adres" cols="30" rows="8"></textarea>
+
+<br><br>
+
+<input type="submit" value="Gönder">
+<input type="reset" value="Temizle">
+
+</form>
+
+</body>
+</html>
