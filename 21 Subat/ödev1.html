@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev 1</title>
+
+    <style>
+        div#box-1,div#box-3 {
+            border: 1px grey solid;
+            border-radius: 30px;
+            padding: 10px;
+            width: 150px;
+            height: 150px;
+        }
+
+        div#box-2 {
+            width: 150px;
+            height: 110px;
+            overflow: auto;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px white;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: blue;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <div id="box-1">
+        
+        <h6 style="color: blue;font-size: 15px;margin: 10px 0;">Lokasyon</h6>
+
+        <div id="box-2">
+          <input type="checkbox" id="adana">
+          <label for="adana">Adana</label><br>
+
+          <input type="checkbox" id="adıyaman">
+          <label for="adıyaman">adıyaman</label><br>
+ 
+          <input type="checkbox" id="Afyonkarahisar">
+          <label for="Afyonkarahisar">Afyonkarahisar</label><br>
+
+          <input type="checkbox" id="Ağrı">
+          <label for="Ağrı">Ağrı</label><br>
+
+          <input type="checkbox" id="Aksaray">
+          <label for="Aksaray">Aksaray</label><br>
+
+          <input type="checkbox" id="Ankara">
+          <label for="Ankara">Ankara</label><br>
+
+          <input type="checkbox" id="Antalya">
+          <label for="Antalya">Antalya</label><br>
+
+        </div>
+
+    </div>
+
+    <div style="margin-top: 50px;" id="box-3">
+        
+        <h6 style="color: blue;font-size: 15px;margin: 10px 0;">Üyelik Sınıfı</h6>
+
+        <input type="checkbox" name="" id="A">
+        <label for="A">A</label><br>
+
+        <input type="checkbox" id="B">
+        <label for="B">B</label><br>
+
+        <input type="checkbox" id="C">
+        <label for="C">C</label><br>
+
+        <input type="checkbox" id="D">
+        <label for="D">D</label><br>
+
+    </div>
+
+
+</body>
+</html>
