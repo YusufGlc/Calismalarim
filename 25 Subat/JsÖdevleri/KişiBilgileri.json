@@ -1,0 +1,24 @@
+{
+    "kisiler":[
+    {
+        "ad":"Ahmet",
+        "soyad":"Veli"
+    },
+    {
+        "ad":"Ali",
+        "soyad":"kara"
+    },
+    {
+        "ad":"Ayşe",
+        "soyad":"Çiçek"
+    },
+    {
+        "ad":"Mehmet",
+        "soyad":"Çınar"
+    },
+    {
+        "ad":"Mustafa",
+        "soyad":"Aydın"
+    }
+    ]
+}
