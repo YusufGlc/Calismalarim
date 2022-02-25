@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödev 1</title>
+
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        img#arkaplan {
+
+            width: 100%;
+            height: 30em;
+            position: absolute;
+            top: 0px;
+            z-index: -10;
+        }
+
+        .box-1 {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            background-image: linear-gradient(to right,#0d1561,#0a6aab);
+            height: 337px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            margin-top: 100px;
+            
+        }
+
+        #item-1 {
+            padding: 32.266px;
+            color: white;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+            width: 50%;
+        }
+
+        #item-1 h2 {
+            font-weight: 700;
+        }
+
+        .button-1 {
+            width: 130px;
+            height: 45px;
+            margin-top: 100px;
+            margin-left: 5px;
+            font-weight: 700;
+            background-color: transparent;
+            color: white;
+            transition: 2;
+            border: 2px white solid;
+            
+        }
+
+        .button-1:hover {
+            cursor: pointer;
+            transition: 1s;
+            
+            background-color: white;
+            color: blue;
+        }
+
+        #item-2 {
+            width: 50%;
+        }
+
+        #item-2 img {
+            object-fit: cover;
+        }
+
+        @media (max-width: 1300px) {
+            #item-1 {
+                font-size: 12px;
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            #item-1,#item-2{
+
+                width: 100%;
+                height: 50%;
+
+            }
+
+            .button-1 {
+                margin-top: 40px;
+            }
+
+            img#arkaplan {
+                height: 900px;
+            }
+
+            #item-2 img {
+                width: 100%;
+            }
+
+            #item-1 {
+                padding: 10px;
+            }
+
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    
+
+    
+
+    <div class="box-1">
+
+        <img src="./images/arkaplan1.jpg" id="arkaplan" >
+        
+        <div class="container">
+
+            <div id="item-1">
+
+                <h2>Cefic Genel Direktörü Marco Mensink Röportaj</h2> <br>
+
+                <p>Cefic Genel Direktörü Marco Mensink Chemical Today için Avrupa Endüstrisinin değişen görünümüne ilişkin röportaj verdi.</p>
+
+                <button class="button-1">Devamını Oku</button>
+
+            </div>
+
+            <div id="item-2">
+                <img src="./images/resim1.jpg">
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
