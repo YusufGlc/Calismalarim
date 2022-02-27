@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="p-1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, autem nihil. Ab, vero. Rem magni dicta architecto porro ipsa, alias amet provident, facilis eius, aperiam non molestias animi sed velit debitis minus ullam nulla ea doloribus vel eligendi ad est.
+    </p>
+
+    <script>
+
+        let paragraf = document.getElementById("p-1"); // p elementi alındı
+
+        let dizi = paragraf.textContent.split(" "); // yazı kelimelere ayrıldı
+
+        paragraf.textContent=null; // paragraf temizlendi
+
+        let kelimeSayisi=0;
+
+        for (let index = 0; index < dizi.length; index++) {
+            
+            let font = document.createElement('font'); // font elementi oluşturuldu
+
+            let length = dizi[index].length; // kelime içindeki harf sayısı alındı
+
+            if (dizi[index].includes(",") || dizi[index].includes(".") || dizi[index].includes("?") || dizi[index].includes("!")) {
+                --length; // noktalama işaretleri harf sayısından çıkarıldı
+            }
+
+            if (length==5) {
+
+                font.color="red"; // font rengi kırmızı olarak ayarlandı
+                font.textContent=" "+dizi[index];
+                paragraf.appendChild(font); // p elementine child atandı 
+            }        
+            else {
+                paragraf.appendChild(document.createTextNode(" "+dizi[index]));
+            }
+            
+            if (length > 1 ) {
+                kelimeSayisi++; // kelime sayısı hesaplandı
+            }
+
+        }
+
+        console.log("toplam kelime sayısı "+kelimeSayisi);
+
+    </script>
+
+    
+    
+</body>
+</html>
