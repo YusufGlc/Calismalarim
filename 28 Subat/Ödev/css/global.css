@@ -4,7 +4,7 @@
 }
 
 .btn {
-    border: none;
+   
     color: white;
     font-size: 15px;
     font-weight: 700;
@@ -16,7 +16,7 @@
     background-color: red;
     color: white;
     border-radius: 10px;
-    border-width: 1px;
+    border-width: 2px;
     margin-top: 10px;
     margin-left: 30px;
 }
@@ -41,6 +41,13 @@
     height: 280px;
     margin: 10px;
     margin-top: 30px;
+    transition: 1s;
+}
+
+.box-2:hover {
+    width: 18rem;
+    height: 20rem;
+    transition: 1s;
 }
 
 .p-1 {
