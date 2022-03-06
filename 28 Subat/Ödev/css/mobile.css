@@ -1,0 +1,34 @@
+#sc-2 #Kurslar #box-3 {
+    display: none;
+}
+
+#sc-4 #container-1 .container p{
+    font-size: medium;
+}
+
+#sc-2 #Dersler #box-5 {
+    display: none;
+}
+
+#sc-2 h1,#sc-2 h4 {
+    display: none;
+}
+
+#sc-2 #Kurslar #box-4 {
+    margin-top: 100px;
+}
+
+#sc-2 #sol-ok,#sc-2 #sag-ok {
+    display: block;
+    font-size: xx-large;
+    margin: auto;
+    color: grey;
+}
+
+.overly {
+    top: 1464px;
+}
+
+#sc-2 {
+    height: 800px;
+}

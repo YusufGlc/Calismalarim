@@ -1,12 +1,54 @@
 
-#sc-2 #Dersler #box-5 {
+#sc-1 header nav{
     display: none;
 }
 
-#sc-2 #Dersler #box-7 {
+#sc-1 header #mobile-nav{
+    display: flex;
+    width: 100%;
+}
+
+#sc-1 header #mobile-nav #logo {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+}
+
+#sc-1 header #mobile-nav #dropdown {
+    padding: 10px;
+    margin: auto 0;
+    margin-left: 15px;
+    margin-right: 20px;
+    height: 35px;
+    
+}
+
+
+/* Sc-1 Article */
+#sc-1 article #box-1 {
+    width: 70%;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#sc-1 article #box-1 #search-box{
+    height: 40px;
+}
+
+#sc-1 article #box-1 #search-box button{
+    height: 40px;
+    width: 40px;
+}
+
+/* Sc-2 */
+
+#sc-2 #Dersler #box-6 {
     display: none;
 }
 
 #sc-2 #Kurslar #box-1,#sc-2 #Kurslar #box-2 {
     display: none;
 }
+
+
