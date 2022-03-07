@@ -14,6 +14,10 @@
     display: none;
 }
 
+#sc-2 #Kurslar {
+    margin-top: 0;
+}
+
 #sc-2 #Kurslar #box-4 {
     margin-top: 100px;
 }
@@ -23,10 +27,6 @@
     font-size: xx-large;
     margin: auto;
     color: grey;
-}
-
-.overly {
-    top: 1464px;
 }
 
 #sc-2 {

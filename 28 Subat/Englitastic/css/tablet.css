@@ -24,6 +24,28 @@
     
 }
 
+#sc-1 header #mobile-nav #dropdown:hover ul {
+    display: block;
+}
+
+#sc-1 header #mobile-nav #dropdown ul {
+    padding: 10px;
+    width: 150px;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    z-index: 10;
+}
+
+#sc-1 header #mobile-nav #dropdown ul li {
+    margin: 10px;
+}
+
+#sc-1 header #mobile-nav #dropdown ul li a {
+    color: black;
+}
+
 
 /* Sc-1 Article */
 #sc-1 article #box-1 {

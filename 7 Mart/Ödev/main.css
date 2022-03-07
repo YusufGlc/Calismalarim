@@ -1,0 +1,138 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #D93872;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/resim1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header #box-1 {
+    height: 70px;
+    background-color: #2F2E41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header #box-1 * {
+    color: white;
+}
+
+header #box-1 i {
+    margin: auto 10px;
+}
+
+header #box-1 img {
+    margin: auto 20%;
+    height: 15px;
+}
+
+header #box-1 p {
+    font-size: 13px;
+    margin: auto 0;
+}
+
+header #box-1 p span {
+    font-weight: 600;
+}
+
+header #image-1 {
+    width: 100%;
+}
+
+header h1 {
+    color: white;
+    margin-left: 18%;
+    margin-top: 50px;
+}
+
+header p {
+    color: white;
+    margin-left: 18%;
+    margin-top: 50px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 215px;
+    background-color: white;
+    box-shadow: 0 5px 15px grey;
+}
+
+header nav ul li {
+    margin: 30px 4%;
+    color: #D93872;
+}
+
+.paketler {
+    display: flex;
+    justify-content: center;
+}
+
+.paketler .paket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.paketler .paket ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    list-style-type: none;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.paketler .paket ul li {
+    margin-top: 10px;
+}
+
+.paketler .paket .fiyat {
+    height: 50px;
+    color: #D93872;
+    font-size: 25px;
+    margin-top: 20px;
+    
+}
+
+.paketler .paket .fiyat span {
+
+    font-weight: 900;
+}
+
+
+.paketler .paket-1 {
+    width: 250px;
+    padding: 15px;
+    box-shadow: 0 5px 15px grey;
+}
+
+.paketler .paket-1 img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.paketler .paket-1 h4 {
+    color: #F2598F;
+    padding-bottom: 10px;
+}

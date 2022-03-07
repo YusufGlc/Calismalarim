@@ -12,7 +12,7 @@ a {
 
 #sc-1 {
     width: 100%;
-    height: 600px;
+    height: 100vh;
 }
 
 #sc-1 header #mobile-nav {
@@ -170,6 +170,7 @@ a {
 #sc-2 #Dersler #box-6:hover {
     width: 20rem;
     height: 390px;
+    box-shadow: 5px 5px 150px grey;
     transition: 1s;
 }
 
@@ -248,6 +249,11 @@ a {
     cursor: pointer;
 }
 
+#sc-2 #btn-1:active {
+    background-color: black;
+    cursor: pointer;
+}
+
 #sc-2 #btn-div {
     justify-content: center;
 }
@@ -263,6 +269,7 @@ a {
     background-repeat: no-repeat;
     height: 500px;
     background-size: cover;
+    position: relative;
 }
 
 #sc-3 #box-1 {
@@ -416,5 +423,5 @@ footer #container-1 #box-2 .container #text-2 {
     width: 100%;
     height: 900px;
     position: absolute;
-    top: 1528px;
+    top: 0px;
 }

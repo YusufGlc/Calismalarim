@@ -33,6 +33,11 @@
     cursor: pointer;
 }
 
+.btn-2:active {
+    background-color: black;
+    cursor: pointer;
+}
+
 .btn:hover {
     cursor: pointer;
 }
@@ -59,6 +64,7 @@
 .box-2:hover {
     width: 18rem;
     height: 20rem;
+    box-shadow: 5px 5px 150px grey;
     transition: 1s;
 }
 
