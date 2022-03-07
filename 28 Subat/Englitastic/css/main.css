@@ -243,6 +243,11 @@ a {
     text-align: center;
 }
 
+#sc-2 #btn-1:hover {
+    background-color: rgb(114, 1, 1);
+    cursor: pointer;
+}
+
 #sc-2 #btn-div {
     justify-content: center;
 }
