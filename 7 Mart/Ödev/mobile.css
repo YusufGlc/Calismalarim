@@ -1,0 +1,40 @@
+
+header #box-1 i {
+    margin: auto 2px;
+}
+
+header h1 {
+    font-size: 17px;
+}
+
+header p {
+    font-size: 13px;
+}
+
+.paketler {
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.paketler .paket {
+    width: 80%;
+}
+
+.hakkımızda .container img {
+    width: 90%;
+}
+
+.hakkımızda .container .texts {
+    width: 90%;
+}
+
+.referanslar .box-buttons .btn {
+    font-size: 12px;
+    margin: 0 5%;
+}
+
+footer .container img {
+    height: 20px;
+    align-self: center;
+}

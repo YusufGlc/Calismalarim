@@ -11,12 +11,17 @@ a {
     color: #D93872;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 header {
     width: 100%;
-    height: 100vh;
-    background-image: url(./images/resim1.jpg);
+    height: 500px;
+    background-image: url(./images/bg-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 header #box-1 {
@@ -37,7 +42,7 @@ header #box-1 i {
 
 header #box-1 img {
     margin: auto 20%;
-    height: 15px;
+    height: 20px;
 }
 
 header #box-1 p {
@@ -67,16 +72,20 @@ header p {
 
 header nav ul {
     display: flex;
+    width: 100%;
     justify-content: center;
     list-style-type: none;
-    margin-top: 215px;
     background-color: white;
     box-shadow: 0 5px 15px grey;
+    position: absolute;
+    bottom: 0px;
 }
 
 header nav ul li {
     margin: 30px 4%;
     color: #D93872;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .paketler {
@@ -89,8 +98,20 @@ header nav ul li {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 10px;
+    margin: 1%;
     border-radius: 20px;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 0 5px 15px grey;
+    padding-top: 40px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.paketler .paket p {
+    font-size: 11px;
+    color: #827E7E;
 }
 
 .paketler .paket ul {
@@ -105,13 +126,13 @@ header nav ul li {
 
 .paketler .paket ul li {
     margin-top: 10px;
+    color: #827E7E;
 }
 
 .paketler .paket .fiyat {
-    height: 50px;
     color: #D93872;
     font-size: 25px;
-    margin-top: 20px;
+    margin-top: 10px;
     
 }
 
@@ -120,19 +141,281 @@ header nav ul li {
     font-weight: 900;
 }
 
-
-.paketler .paket-1 {
-    width: 250px;
-    padding: 15px;
-    box-shadow: 0 5px 15px grey;
-}
-
-.paketler .paket-1 img {
+.paketler .paket img {
     width: 100px;
     margin-bottom: 20px;
 }
 
-.paketler .paket-1 h4 {
+.paketler .paket h4 {
     color: #F2598F;
     padding-bottom: 10px;
+}
+
+.paketler .paket .btn {
+    margin-top: 15px;
+    width: 80%;
+    height: 30px;
+    border-radius: 30px;
+    border: #D93872 solid 1px;
+    color: #D93872;
+    background-color: white;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.paketler .paket .btn-2 {
+    background-color: #D93872;
+    color: white;
+    box-shadow: 0 5px 10px #F2598F;
+    font-weight: 600;
+}
+
+.paketler .paket .box-1 {
+    position: absolute;
+    top: -15px;
+    background-color: #F2598F;
+    padding: 10px;
+    border-radius: 50px;
+    padding-top: 20px;
+    font-size: 12px;
+    color: white;
+    font-weight: 600;
+    
+}
+
+.paketler .paket:hover:not(.paket-4) {
+    
+    border: #D93872 2px dashed;
+    transition: 0.2s;
+}
+
+.paketler .paket-4 {
+    background-color: #F44D88;
+    height: 400px;
+}
+
+.paketler .paket-4 h4 {
+    color: white;
+}
+
+.paketler .paket-4 div {
+    border-top: white dashed 2px;
+    width: 170px;
+    margin: 10px 0;
+}
+
+.paketler .paket-4 p {
+    color: white;
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+.hakkımızda {
+    margin: 50px 0;
+}
+
+.hakkımızda .container {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+}
+
+.hakkımızda .container .texts {
+    width: 450px;
+}
+
+.hakkımızda .container .texts * {
+    color: #D93872;
+}
+
+.hakkımızda .container .texts h5 {
+    margin: 20px 0;
+}
+
+.hakkımızda .container .texts p {
+    color: black;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.hakkımızda .container .texts .number {
+    border-radius: 100%;
+    width: 80px;
+    text-align: center;
+    padding: 20px;
+    color: #D93872;
+    font-size: 25px;
+    border: #D93872 dashed;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.hakkımızda .container img {
+    margin-right: 40px;
+    height: 350px;
+}
+
+.hakkımızda .box-2 img {
+    margin-left: 40px;
+    margin-right: 0;
+    height: 320px;
+}
+
+.hakkımızda .box-3 ul {
+    list-style-type: disc;
+    font-size: 24px;
+}
+
+.hakkımızda .box-3 ul li p {
+    color: #6B6B6B !important;
+}
+
+.hakkımızda .box-3 img {
+    height: 360px;
+}
+
+.referanslar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bg {
+    position: relative;
+}
+
+.bg img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -10;
+    height: 100%;
+}
+
+.referanslar h1 {
+    margin-top: 40px;
+    color: #D93872;
+    margin-bottom: 50px;
+}
+
+.referanslar h1 span {
+    font-weight: 100;
+}
+
+.referanslar .box-buttons {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.referanslar .box-buttons .btn {
+    border: none;
+    background-color: transparent;
+    color: #D93872;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 20px ;
+    padding-bottom: 10px;
+}
+
+.referanslar .box-buttons .btn:hover {
+    cursor: pointer;
+    border-bottom: #D93872 dashed 2px;
+}
+
+.referanslar .box-buttons .btn:focus {
+    border-bottom: #D93872 dashed 2px;
+}
+
+.talep-formu h1 {
+    text-align: center;
+    color: white;
+    margin-top: 230px;
+}
+
+.talep-formu h1 span {
+    font-weight: 100;
+}
+
+.talep-formu form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.talep-formu form input,.talep-formu form select {
+    margin: 0 10px;
+    margin-bottom: 20px;
+    width: 39%;
+    height: 40px;
+    background: none;
+    color: white;
+    border: solid white 2px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.talep-formu form select {
+    font-size: 10px;
+}
+
+.talep-formu form textarea {
+    width: 80%;
+    resize: none;
+    background: none;
+    color: white;
+    border: solid white 2px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.talep-formu form .gönder {
+    margin-top: 20px;
+    max-width: 250px;
+    height: 50px;
+    background-color: white;
+    color: #D93872;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.talep-formu form .gönder:hover {
+    cursor: pointer;
+    box-shadow: 0 1px 15px white;
+}
+
+::placeholder {
+    color: white;
+}
+
+option {
+    color: black;
+}
+
+footer {
+    width: 100%;
+    background-color: #33314A;
+    padding: 20px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+footer .container img {
+    height: 30px;
 }

@@ -1,0 +1,32 @@
+header #box-1 img {
+    margin: auto 10%;
+}
+
+.paketler {
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.paketler .paket {
+    width: 40%;
+}
+
+.hakkımızda .container {
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.hakkımızda .box-2 {
+    flex-direction: column;
+}
+
+.hakkımızda .container img {
+    width: 60%;
+}
+
+.hakkımızda .container .texts {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
