@@ -15,23 +15,28 @@ p {
     color: gray;
 }
 
-body {
+.main-container {
     display: flex;
-
 }
 
-.menu ul {
+.main-container .menu {
+    align-self: flex-start;
+    margin-right: 30px;
+    width: 350px;
+}
+
+.main-container .menu ul {
     list-style-type: none;
     box-shadow: 5px 0 15px rgb(184, 182, 182);
     padding-left: 0;
 }
 
-.menu ul :nth-child(3) li {
+.main-container .menu ul :nth-child(3) li {
     background-color: rgb(0, 146, 204);
     color: white;
 }
 
-.menu ul a div {
+.main-container .menu ul a div {
     margin: auto 0;
     height: 15px;
     width: 3px;
@@ -40,9 +45,8 @@ body {
     background-color: white;
 }
 
-.menu ul a li {
+.main-container .menu ul a li {
     padding: 20px;
-    padding-right: 80px;
     font-size: 15px;
     font-weight: 700;
     background-color: white;
@@ -54,15 +58,68 @@ body {
     color: white;
 }
 
-.grid-container {
-    display: grid;
-    grid-gap: 20px;
-    justify-content: end;
-    grid-template-columns: repeat(auto-fit, 300px);
-    width: 80%;
+.main-container .container {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-.grid-container .items {
+.main-container .container h1 {
+    align-self: flex-start;
+    color: rgb(0, 146, 204);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+}
+
+.main-container .container h1 span {
+    width: 3px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    background-color:rgb(0, 146, 204);
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.main-container .container .menu-2 {
+    background-color: white;
+    box-shadow: 0 0 5px grey;
+    margin: 10px;
+    display: flex;
+    height: 50px;
+    width: 100%;
+}
+
+.main-container .container .menu-2 button {
+    width: 25%;
+    background-color: white;
+    color: gray;
+    border: none;
+    transition: 0.5s;
+}
+
+.main-container .container .menu-2 button:hover {
+    color: black;
+}
+
+.main-container .container .menu-2 button:focus {
+    transition: 0.2s;
+    border-bottom: 3px solid rgb(0, 146, 204);;
+}
+
+.main-container .container .grid-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, 300px);
+    width: 100%;
+
+}
+
+.main-container .container .grid-container .items {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,11 +131,11 @@ body {
     transition: 0.8s;
 }
 
-.grid-container .items:hover {
+.main-container .container .grid-container .items:hover {
     box-shadow: 0 0 25px grey;
 }
 
-.grid-container .items img {
+.main-container .container .grid-container .items img {
     width: 100px;
     margin-bottom: 20px;
     border-radius: 100%;
