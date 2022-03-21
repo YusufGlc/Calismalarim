@@ -1,0 +1,106 @@
+
+a {
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav a {
+    color: black;
+}
+
+nav button {
+    background-image: linear-gradient(to right,#E44123,#F2910F);
+    border: none;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 13px;
+}
+
+.banner {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 30px;
+}
+
+.banner .div-1 {
+    margin-right: 5%;
+    width: 50%;
+    margin-top: 50px;
+}
+
+.banner .div-1 p {
+    color: grey;
+    line-height: 25px;
+}
+
+.banner .div-2 img {
+    width: 300px;
+}
+
+form {
+    display: flex;
+    padding: 30px 20px;
+    background-color: white;
+    box-shadow: 0 5px 25px gray;
+    width: 80%;
+    margin: 40px auto;
+    justify-content: center;
+}
+
+form .item {
+    width: 22%;
+    height: 50px;
+    
+}
+
+form .item label {
+    font-size: 11px;
+}
+
+form .item input {
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(209, 209, 209);
+}
+
+form button {
+    width: 60px;
+    height: 45px;
+    border: none;
+    border-radius: 15px;
+    margin: auto;
+    background-image: linear-gradient(to right,#E44123,#F2910F);
+    position: relative;
+}
+
+form button i {
+    color: white;
+    position: absolute;
+    font-size: 22px;
+    top: 12px;
+    left: 20px;
+}
+
+.sc-1,.sc-2 {
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.sc-1 h3 span ,.sc-2 h3 span  {
+    font-size: 25px;
+}
+
+.sc-2 {
+    margin-top: 100px;
+}
