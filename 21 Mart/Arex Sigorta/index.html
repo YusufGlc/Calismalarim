@@ -12,11 +12,15 @@
 
   <!-- Css -->
   <link rel="stylesheet" href="Css/main.css">
+  <link rel="stylesheet" href="Css/tablet.css" media="(max-width:860px)">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
-    integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
   <title>Arex Sigorta</title>
 
@@ -28,22 +32,40 @@
 
     <nav class="navbar">
       <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="./Css/İmages/Logo.png" alt="" width="140px">
-        </a>
 
+        <div class="dropdown-1">
+          <button><i class="fa-solid fa-bars"></i></button>
+          <div class="dropdown-item-1">
+
+            <ul>
+
+              <li><a href="">Ürünler</a></li>
+              <li><a href="">Kurumsal</a></li>
+              <li><a href="">Acenta</a></li>
+              <li><a href="">Hasar Yardım</a></li>
+              <li><a href="">Keşfet</a></li>
+
+            </ul>
+
+          </div>
+        </div>
+
+
+        <img src="./Css/İmages/Logo.png" alt="" width="140px">
+
+        
         <a href="">Ürünler</a>
         <a href="">Kurumsal</a>
         <a href="">Acenta</a>
         <a href="">Hasar Yardım</a>
         <a href="">Keşfet</a>
 
-        <button>Online İşlemler</button>
+        <button class="btn-1">Online İşlemler</button>
 
       </div>
     </nav>
 
-    <section class="banner">
+    <section class="banner" data-aos="fade-up">
 
       <div class="div-1">
         <h2>KONUT PAKET SİGORTASI</h2>
@@ -60,7 +82,7 @@
 
     </section>
 
-    <form>
+    <form data-aos="fade-right">
 
       <div class="item">
         <label for="plaka">Plaka</label><br>
@@ -89,7 +111,7 @@
   </div>
 
 
-  <section class="sc sc-1">
+  <section class="sc sc-1" data-aos="fade-up-right">
 
     <h3>KONUT PAKET SİGORTASI <br><span class="lead">NEDİR?</span></h3>
 
@@ -110,12 +132,13 @@
 
   <div class="bg bg-2">
 
-    <section class="sc sc-2">
+    <section class="sc sc-2" data-aos="fade-up-right">
 
       <h3>KONUT PAKET SİGORTASI <br><span class="lead">YAPTIRMALIYIM?</span></h3>
 
       <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla ligula id dictum
-        consequat. Nunc eget posuere libero. Praesent varius libero sit amet tincidunt laoreet. <strong>Suspendisse tincidunt,</strong>
+        consequat. Nunc eget posuere libero. Praesent varius libero sit amet tincidunt laoreet. <strong>Suspendisse
+          tincidunt,</strong>
         dui
         vitae finibus interdum, neque sem suscipit ex, quis euismod lorem metus sed turpis. Proin tempus, metus eget
         bibendum rhoncus, velit ante dapibus enim, sit amet
@@ -159,7 +182,7 @@
 
         </div>
 
-        <img src="./Css/İmages/image2.png">
+        <img src="./Css/İmages/image2.png" draggable="false">
 
         <div class="texts texts-2">
 
@@ -203,13 +226,13 @@
   </div>
 
 
-  <section class="sc sc-3">
+  <section class="sc sc-3" >
 
 
     <h3>KONUT PAKET SİGORTASI <br><span class="lead">TEMİNATLARI</span></h3>
 
 
-    <div class="grid">
+    <div class="grid" data-aos="fade-right">
 
       <div class="item">
         <img src="./Css/İmages/image3.png">
@@ -228,7 +251,7 @@
           kötü niyetli
           hareketler, terör</p>
       </div>
-      
+
       <div class="item">
         <img src="./Css/İmages/image3.png">
         <p>Sel ve su baskını</p>
@@ -279,7 +302,7 @@
 
     <button class="btn-2">Ek Teminatlar</button>
 
-    <div class="grid">
+    <div class="grid" data-aos="fade-right">
 
       <div class="item">
         <img src="./Css/İmages/image3.png">
@@ -295,7 +318,7 @@
         <img src="./Css/İmages/image3.png">
         <p>Yurtdışı Teminatı</p>
       </div>
-      
+
       <div class="item">
         <img src="./Css/İmages/image3.png">
         <p>Kullanım tarzına göre
@@ -346,9 +369,12 @@
     <section class="sc sc-4">
 
       <h3>KONUT PAKET SİGORTASI <br><span class="lead">ASİSTANS HİZMETLERİ</span></h3>
-  
-      <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla ligula id dictum consequat. Nunc eget posuere libero. Praesent varius libero sit amet tincidunt laoreet. <strong>Suspendisse tincidunt,</strong> dui vitae finibus interdum, neque sem suscipit ex, quis euismod lorem metus sed turpis. Proin tempus, metus eget bibendum rhoncus, velit ante dapibus enim, sit amet ultricies.</p>
-  
+
+      <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla ligula id dictum
+        consequat. Nunc eget posuere libero. Praesent varius libero sit amet tincidunt laoreet. <strong>Suspendisse
+          tincidunt,</strong> dui vitae finibus interdum, neque sem suscipit ex, quis euismod lorem metus sed turpis.
+        Proin tempus, metus eget bibendum rhoncus, velit ante dapibus enim, sit amet ultricies.</p>
+
       <button>DÖKÜMANI AÇ</button>
 
     </section>
@@ -357,34 +383,357 @@
 
   <section class="sc sc-5">
 
-    <h3>KONUT PAKET SİGORTASI <br><span class="lead">GENEL ŞARTLAR</span></h3>
+    <h3>KONUT PAKET SİGORTASI <span class="lead">GENEL ŞARTLAR</span></h3>
 
-    <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla ligula id dictum consequat. Nunc eget posuere libero. Praesent varius libero sit amet tincidunt laoreet.</p>
+    <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla ligula id dictum
+      consequat. Nunc eget posuere libero. Praesent varius libero sit amet tincidunt laoreet.</p>
 
     <ul class="grid">
-      <li><p>Yangın Sigortası Genel Şartları</p></li>
-      <li><p>Hırsızlık Sigortası Genel Şartları</p></li>
-      <li><p>Cam Kırılmasına Karşı Sigorta Genel Şartları</p></li>
-      <li><p>Elektronik Cihaz Sigortası Genel Şartları</p></li>
-      <li><p>Üçüncü Şahıslara Karşı Mali Mesuliyet Sigortası Genel Şartları</p></li>
-      <li><p>Ferdi Kaza Sigortası Genel Şartları</p></li>
-      <li><p>Hukuksal Koruma Sigortası Genel Şartları</p></li>
+      <li>
+        <p>Yangın Sigortası Genel Şartları</p>
+      </li>
+      <li>
+        <p>Hırsızlık Sigortası Genel Şartları</p>
+      </li>
+      <li>
+        <p>Cam Kırılmasına Karşı Sigorta Genel Şartları</p>
+      </li>
+      <li>
+        <p>Elektronik Cihaz Sigortası Genel Şartları</p>
+      </li>
+      <li>
+        <p>Üçüncü Şahıslara Karşı Mali Mesuliyet Sigortası Genel Şartları</p>
+      </li>
+      <li>
+        <p>Ferdi Kaza Sigortası Genel Şartları</p>
+      </li>
+      <li>
+        <p>Hukuksal Koruma Sigortası Genel Şartları</p>
+      </li>
     </ul>
 
   </section>
 
-  
+
+  <div class="bg">
+
+    <section class="sc sc-6">
+
+      <h3>BİZE SORMAK İSTEDİĞİN <br><span class="lead">KONULAR MI VAR?</span></h3>
+
+      <div class="container">
+
+        <div class="item-1">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla ligula id dictum consequat. Nunc
+            eget posuere libero. Praesent varius libero sit amet tincidunt laoreet.</p>
+
+          <img src="./Css/İmages/image4.png"> 0(212) 987 65 43 <br>
+
+          <img src="./Css/İmages/image5.png"> arex@arexsigorta.com
+
+        </div>
+
+        <div class="item-2">
+          <p>Lorem ipsum dolor sit amet, consectetur dolor sit amet,</p>
+
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Lorem ipsum dolor sit amet, consectetur?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla 
+                    ligula id dictum consequat. Nunc eget posuere libero. Praesent varius libero 
+                    sit amet tincidunt laoreet.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Lorem ipsum dolor sit amet, consectetur?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla 
+                    ligula id dictum consequat. Nunc eget posuere libero. Praesent varius libero 
+                    sit amet tincidunt laoreet.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Lorem ipsum dolor sit amet, consectetur?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla 
+                    ligula id dictum consequat. Nunc eget posuere libero. Praesent varius libero 
+                    sit amet tincidunt laoreet.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <section class="sc sc-7">
+
+    <h3>İLGİNİZİ ÇEKEBİLECEK DİĞER HABERLER</h3>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="item">
+            <img src="./Css/İmages/image6.png">
+            <div class="texts">
+              <h6>Deprem Sigortası Neden Zorunlu?</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec fringilla ligula id dictum consequat. Nunc eget </p>
+              <a href="">Haberin Devamını Oku <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+    
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="item">
+            <img src="./Css/İmages/image7.png">
+            <div class="texts">
+              <h6>Deprem Sigortası Neden Zorunlu?</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec fringilla ligula id dictum consequat. Nunc eget </p>
+              <a href="">Haberin Devamını Oku <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+    
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="item">
+            <img src="./Css/İmages/image8.png">
+            <div class="texts">
+              <h6>Deprem Sigortası Neden Zorunlu?</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec fringilla ligula id dictum consequat. Nunc eget </p>
+              <a href="">Haberin Devamını Oku <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="container-1">
+
+      <div class="item">
+        <img src="./Css/İmages/image6.png">
+        <div class="texts">
+          <h6>Deprem Sigortası Neden Zorunlu?</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec fringilla ligula id dictum consequat. Nunc eget </p>
+          <a href="">Haberin Devamını Oku <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+
+        <div class="box-1">
+          Kasko
+        </div>
+
+      </div>
+
+      <div class="item">
+        <img src="./Css/İmages/image7.png">
+        <div class="texts">
+          <h6>Deprem Sigortası Neden Zorunlu?</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec fringilla ligula id dictum consequat. Nunc eget </p>
+          <a href="">Haberin Devamını Oku <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+
+        <div class="box-1">
+          Kasko
+        </div>
+
+      </div>
+
+      <div class="item">
+        <img src="./Css/İmages/image8.png">
+        <div class="texts">
+          <h6>Deprem Sigortası Neden Zorunlu?</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec fringilla ligula id dictum consequat. Nunc eget </p>
+          <a href="">Haberin Devamını Oku <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+
+        <div class="box-1">
+          Kasko
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+
+    <div class="bg bg-3">
+
+      <section class="sc sc-footer">
+
+        <div class="container-1">
+
+          <div class="item item-1">
+            <h5>Kurumsal</h5>
+            <ul>
+              <li><a href="">Hakkımızda</a></li>
+              <li><a href="">Organizasyon Yapısı</a></li>
+              <li><a href="">Yönetim Kurulu & Yönetim Kadrosu</a></li>
+              <li><a href="">Şirket Bilgileri</a></li>
+              <li><a href="">Vizyon & Misyon</a></li>
+              <li><a href="">Finansal Bilgiler</a></li>
+              <li><a href="">İlgili Mevzuatlar</a></li>
+            </ul>
+          </div>
+
+          <div class="item item-2">
+            <h5>Ürünler</h5>
+            <ul>
+              <li><a href="">Trafik</a></li>
+              <li><a href="">Kasko</a></li>
+              <li><a href="">Dask</a></li>
+              <li><a href="">Tamamlayıcı Sağlık</a></li>
+            </ul>
+          </div>
+
+          <div class="item item-3">
+            <h5>Acente</h5>
+            <ul>
+              <li><a href="">Acente Başvuru Formu</a></li>
+              <li><a href="">Bölge Müdürlükleri</a></li>
+            </ul>
+          </div>
+
+          <div class="item item-4">
+            <h5>Son Haberler</h5>
+            <ul>
+
+              <li>
+                <img src="./Css/İmages/image9.png">
+
+                <div class="texts">
+                  <h6>Kaza Anında ve Sonrasında Yapılması Gerekenler</h6>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor malesuada est, ut
+                    ultricies risus tristique quis.</p>
+                </div>
+              </li>
+
+              <li>
+                <img src="./Css/İmages/image10.png">
+
+                <div class="texts">
+                  <h6>DASK Neden Zorunlu?</h6>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor malesuada est, ut
+                    ultricies risus tristique quis.</p>
+                </div>
+              </li>
+
+              <li>
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+                <i class="fa-brands fa-twitter"></i>
+
+                <i class="fa-brands fa-instagram"></i>
+
+                <i class="fa-brands fa-linkedin-in"></i>
+
+                <img src="./Css/İmages/youtube-logo.png" draggable="false">
+
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="box-1">
+
+          <div class="item-1">
+            <h6>Kasko Sigortanızı Online Alın <br> <span>%20'ye Varan İndirimlere</span> Sahip Olun!</h6>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor malesuada est, ut ultricies
+              risus tristique quis.</p>
+
+          </div>
+
+          <div class="item-2">
+            <button>Kampanyaya Hemen Katıl</button>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <div class="box-2">
+
+      <img src="./Css/İmages/arexLogo.png">
+
+      <p>AREX Sigorta Tüm Hakları Saklıdır. © 2020</p>
+
+      <img src="./Css/İmages/acerCreaLogo.png">
+
+    </div>
+
+  </footer>
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous">
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous">
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous">
+  </script>
+
+  <script>
+      AOS.init();
+  </script>
+
 </body>
 
 </html>
