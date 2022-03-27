@@ -310,13 +310,13 @@ form button i {
 }
 
 .sc-6 .container .item-1 {
-    width: 45%;
-    margin-right: 100px;
+    width: 68%;
+    margin-right: 60px;
     padding-top: 30px;
 }
 
 .sc-6 .container .item-1 img {
-    width: 20%;
+    width: 60px;
 }
 
 .sc-6 .container .item-2 .box-1 {
@@ -485,31 +485,6 @@ footer .sc-footer .container-1 .item-4 ul li:last-child img {
     border-radius: 10px;
 }
 
-@media (max-width:1090px) {
-    .sc-footer .container-1 {
-        flex-wrap: wrap;
-    }
-    
-    .sc-footer .container-1 .item-4 {
-        width: 80% !important;
-    }
-}
-
-@media (max-width:595px) {
-    .sc-footer .container-1 .item-3 {
-        width: 80% !important;
-    }
-}
-
-@media (max-width:410px) {
-    .sc-footer .container-1 .item-2 {
-        width: 80% !important;
-    }
-    .sc-footer .container-1 .item-1 {
-        width: 80% !important;
-    }
-}
-
 
 footer .sc-footer .box-1 {
     display: flex;
@@ -615,4 +590,87 @@ nav .dropdown-1 .dropdown-item-1 ul {
 
 #carouselExampleIndicators {
     display: none;
+}
+
+
+
+
+@media (max-width:1090px) {
+    .sc-footer .container-1 {
+        flex-wrap: wrap;
+    }
+    
+    .sc-footer .container-1 .item-4 {
+        width: 80% !important;
+    }
+}
+
+@media (max-width:750px) {
+    
+    .sc-footer .container-1 .item-4 {
+        width: 100% !important;
+    }
+
+    .sc-footer .container-1 .item-4 li:last-child {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width:595px) {
+    .sc-footer .container-1 .item-3 {
+        width: 80% !important;
+    }
+}
+
+@media (max-width:500px) {
+    footer .box-2 {
+        flex-wrap: wrap;
+    }
+
+    footer .box-2 img {
+        width: 30%;
+    }
+
+    footer .box-2 p {
+        order: 3;
+        margin-top: 20px;
+        font-size: 90%;
+    }
+
+}
+
+@media (max-width:410px) {
+    .sc-footer .container-1 .item-2 {
+        width: 80% !important;
+    }
+    .sc-footer .container-1 .item-1 {
+        width: 80% !important;
+    }
+
+    .sc-footer .container-1 .item-1 {
+        width: 80% !important;
+    }
+}
+
+@media (max-width:385px) {
+
+    .sc-footer .container-1 .item-4 li:nth-child(1),.sc-footer .container-1 .item-4 li:nth-child(2) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sc-footer .container-1 .item-4 li img {
+        width: 50%;
+    }
+
+    .sc-footer .container-1 .item-4 li .texts p {
+        text-align: center;
+    }
+
+    .sc-footer .container-1 .item-4 .texts h6 {
+        text-align: center;
+    }
+
+
 }
