@@ -221,27 +221,24 @@ form button i {
     color: #15324B;
 }
 
-.sc-3 button {
+.sc-3 .btn-1 {
     display: block;
-    margin: 0 auto;
-    margin-bottom: 30px;
+    margin: 50px auto;
     height: 50px;
     width: 200px;
     border-radius: 12px;
     border: 1px #C5CED6 solid;
     color: #1C233C;
-}
-
-.sc-3 .btn-1 {
     background-color: white;
-    margin-top: 50px;
 }
 
-.sc-3 .btn-2 {
+.sc-3 .btn-1:hover {
     background-color:#C5CED6;
-    margin-bottom: 50px;
 }
 
+.sc-3 .grid-2 {
+    display: none;
+}
 
 
 /* sc-4 */
@@ -559,7 +556,7 @@ nav .dropdown-1,.dropdown-1 .dropdown-item-1 {
 nav .dropdown-1 .dropdown-item-1 {
     position: absolute;
     left: 0;
-    width: 200px;
+    width: 80vh;
     background-color: white;
     z-index: 10;
 }
@@ -572,17 +569,18 @@ nav .dropdown-1 .dropdown-item-1 ul {
 
 @media (max-width:770px) {
     
-    nav a,nav .btn-1 {
+    nav .nav-a,nav .btn-1 {
         display: none;
     }
 
     nav .dropdown-1 {
         display: block;
     }
-    
-    nav .dropdown-1:hover * {
-        display: block;
+
+    nav .dropdown-1 ul {
+        list-style-type: none;
     }
+
     
 }
 
@@ -660,6 +658,10 @@ nav .dropdown-1 .dropdown-item-1 ul {
         align-items: center;
     }
 
+    .sc-footer .container-1 .item-4 h5 {
+        padding-left: 20px;
+    }
+
     .sc-footer .container-1 .item-4 li img {
         width: 50%;
     }
@@ -670,6 +672,11 @@ nav .dropdown-1 .dropdown-item-1 ul {
 
     .sc-footer .container-1 .item-4 .texts h6 {
         text-align: center;
+
+    }
+
+    .sc-footer .box-1 {
+        padding: 10px !important;
     }
 
 
