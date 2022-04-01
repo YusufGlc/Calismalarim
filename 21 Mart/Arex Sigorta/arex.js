@@ -22,3 +22,34 @@ function dropdownClick() {
     }
 
 }
+
+function overlyShow() {
+    let overly = document.querySelector(".overly");
+    overly.style.display="block";
+}
+
+function overlyHide() {
+    let overly = document.querySelector(".overly");
+    overly.style.display="none";
+}
+
+
+
+function urunlerHover() {
+    overlyShow();
+    let box = document.querySelector(".urunler-box");
+    box.style.display="block";
+
+    let urunlerLink = document.querySelector(".urunler-a");
+    urunlerLink.appendChild(box);
+
+}
+
+function urunlerLeave() {
+    overlyHide();
+    let box = document.querySelector(".urunler-box");
+    box.style.display="none";
+
+}
+
+

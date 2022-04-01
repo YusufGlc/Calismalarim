@@ -1,6 +1,7 @@
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 * {
@@ -12,6 +13,28 @@ a {
     width: 100%;
 }
 
+ul {
+    list-style-type: none;
+}
+
+.overly {
+    background-color: grey;
+    opacity: 80%;
+    width: 100%;
+    height: 999999999px;
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+
+nav {
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+    z-index: 30;
+    background-color: white;
+    box-shadow: 0 1px 25px 1px gray;
+}
 
 nav a {
     color: black;
@@ -28,6 +51,53 @@ nav button {
     font-size: 13px;
 }
 
+nav .hidden-box {
+    position:absolute;
+    overflow: hidden;
+    left: 0;
+    z-index: 10;
+    padding: 30px;
+    padding-top: 20px;
+    display: none;
+}
+
+nav .urunler-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 40px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 30px;
+    border-end-end-radius: 20px;
+    border-end-start-radius: 20px;
+    flex-wrap: wrap;
+    cursor: default;
+}
+
+nav .hidden-box ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav .hidden-box ul li h6 {
+    color: #ef8013;
+    font-weight: 700;
+    font-size: 17px;
+    cursor: text;
+}
+
+nav .hidden-box ul li a {
+    color: gray;
+}
+
+nav .hidden-box ul li a:hover {
+    text-decoration: underline;
+    color: gray;
+}
+
+
+/* Banner */
 .banner {
     width: 80%;
     margin: 0 auto;
@@ -50,6 +120,10 @@ nav button {
     width: 300px;
 }
 
+
+
+
+/* Form */
 form {
     display: flex;
     padding: 30px 20px;
@@ -273,6 +347,7 @@ form button i {
     grid-gap: 20px;
     color: #EB7D11;
     margin-top: 50px;
+    list-style-type: disc;
 }
 
 .sc-5 .grid li {
@@ -343,9 +418,15 @@ form button i {
 .sc-7 .container-1 {
     display: flex;
     text-align: start;
-    margin: 0;
-    width: 100% ;
+    margin: 0 auto;
+    padding: 10px 20px;
+    width: 80% ;
     justify-content: center;
+}
+
+.slick-dots li button::before {
+    color: red !important;
+    font-size: 12px !important;
 }
 
 .sc-7 .container-1 .item {

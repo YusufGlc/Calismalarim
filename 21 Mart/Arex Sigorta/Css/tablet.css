@@ -73,13 +73,9 @@ form .item {
     width: 100%;
 }
 
-.sc-7 #carouselExampleIndicators {
-    display: block;
-    background-color: rgb(187, 187, 187);
-}
 
-.sc-7 .container-1 {
-    display: none;
+.sc-7 .container-1 .item {
+    flex-direction: column;
 }
 
 .sc-footer .box-1 {
