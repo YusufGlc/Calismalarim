@@ -42,7 +42,6 @@ function urunlerHover() {
 
     let urunlerLink = document.querySelector(".urunler-a");
     urunlerLink.appendChild(box);
-
 }
 
 function urunlerLeave() {
@@ -51,5 +50,3 @@ function urunlerLeave() {
     box.style.display="none";
 
 }
-
-

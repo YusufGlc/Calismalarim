@@ -18,7 +18,7 @@ ul {
 }
 
 .overly {
-    background-color: grey;
+    background-color: black;
     opacity: 80%;
     width: 100%;
     height: 999999999px;
@@ -51,6 +51,11 @@ nav button {
     font-size: 13px;
 }
 
+.nav-a:hover {
+    transition: 0.2s;
+    border-bottom: 4px #09317C solid;
+}
+
 nav .hidden-box {
     position:absolute;
     overflow: hidden;
@@ -64,6 +69,7 @@ nav .hidden-box {
 nav .urunler-grid {
     display: grid;
     grid-template-columns: auto auto auto auto;
+    
     grid-gap: 40px;
     width: 100%;
     height: 100%;
@@ -73,6 +79,17 @@ nav .urunler-grid {
     border-end-start-radius: 20px;
     flex-wrap: wrap;
     cursor: default;
+}
+
+nav .urunler-box .box-1 {
+    display: flex;
+    background-color: #09317C;
+    padding: 20px 40px;
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 50px;
 }
 
 nav .hidden-box ul {
