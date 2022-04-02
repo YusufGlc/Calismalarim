@@ -38,7 +38,7 @@
 
   <div class="bg bg-1">
 
-    <nav class="navbar">
+    <nav class="navbar" onmouseleave="closeAllMenu()">
       <div class="container">
 
         <div class="dropdown-1">
@@ -62,11 +62,11 @@
         <img src="./Css/İmages/Logo.png" alt="" width="140px">
 
         
-        <a class="nav-a urunler-a" onmouseenter="urunlerHover()" onmouseleave="urunlerLeave()">Ürünler</a>
-        <a class="nav-a" href="">Kurumsal</a>
-        <a class="nav-a" href="">Acenta</a>
-        <a class="nav-a" href="">Hasar Yardım</a>
-        <a class="nav-a" href="">Keşfet</a>
+        <a class="nav-a urunler-a" onmouseenter="urunlerHover()">Ürünler</a>
+        <a class="nav-a kurumsal-a" onmouseenter="kurumsalHover()">Kurumsal</a>
+        <a class="nav-a acente-a" onmouseenter="acenteHover()">Acenta</a>
+        <a class="nav-a hasarYardım-a" onmouseenter="hasarYardimHover()">Hasar Yardım</a>
+        <a class="nav-a kesfet-a" onmouseenter="kesfetHover()">Keşfet</a>
 
         <button class="btn-1">Online İşlemler</button>
 
@@ -75,7 +75,7 @@
       <div class="urunler-box hidden-box">
 
 
-        <div class="urunler-grid">
+        <div class="urunler-grid grid">
           <ul class="item-1">
             <li><h6>ARAÇ</h6></li>
             <li><a href="">GENİŞLETİLMİŞ KASKO</a></li>
@@ -121,6 +121,74 @@
             <li><a href="">KONUT PAKET SİGORTASI</a></li>
             <li><a href="">ZORUNLU DEPREM SİGORTASI</a></li>
           </ul>
+
+        </div>
+
+      </div>
+
+      <div class="kurumsal-box hidden-box">
+
+
+        <div class="kurumsal-grid grid">
+
+          <a href="">HAKKIMIZDA</a>
+
+          <a href="">YÖNETİM KURULU</a>
+
+          <a href="">ORGANİZASYON YAPISI</a>
+
+          <a href="">YASAL BİLGİLENDİRMELER</a>
+          
+          <a href="">ŞİRKET GENEL BİLGİLERİ</a>
+
+          <a href="">FİNANSAL BİLGİLER</a>
+
+          <a href="">SERMAYE YAPISI</a>
+
+          <a href="">İLETİŞİM</a>
+
+        </div>
+
+      </div>
+
+      <div class="acente-box hidden-box">
+
+
+        <div class="acente-grid grid">
+
+          <a href="">ACENTELİK BAŞVURUSU</a>
+
+          <a href="">EN YAKIN ACENTE</a>
+
+        </div>
+
+      </div>
+
+      <div class="hasarYardım-box hidden-box">
+
+        <div class="hasarYardım-grid grid">
+
+          <a href="">ANLAŞMALI SERVİSLER</a>
+
+          <a href="">ANLAŞMALI SERVİS BAŞVURUSU</a>
+
+          <a href="">TEDARİKÇİ BAŞVURUSU</a>
+
+          <a href="">HASAR ANINDA</a>
+          
+          <a href="">HASAR İHBARI</a>
+
+        </div>
+
+      </div>
+
+      <div class="kesfet-box hidden-box">
+
+        <div class="kesfet-grid grid">
+
+          <a href="">YARDIM MERKEZİ</a>
+
+          <a href="">SSS</a>
 
         </div>
 
@@ -500,11 +568,11 @@
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                   Lorem ipsum dolor sit amet, consectetur?
                 </button>
               </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla 
                     ligula id dictum consequat. Nunc eget posuere libero. Praesent varius libero 
