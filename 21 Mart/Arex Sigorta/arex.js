@@ -12,13 +12,16 @@ function EkTeslimatlar() {
 }
 
 function dropdownClick() {
-    let item = document.querySelector(".dropdown-item-1");
+    let item = document.querySelector(".dropdown-1");
+    let nav = document.querySelector(".navbar");
 
-    if (item.style.display=="none") {
-        item.style.display="block";
+    nav.setAttribute("style","position: fixed; box-shadow: 0 1px 25px 1px gray;")
+
+    if (item.style.display=="block") {
+        item.setAttribute("style","display: none;")
     }
     else{
-        item.style.display="none";
+        item.setAttribute("style","display: block;")
     }
 
 }
@@ -99,7 +102,13 @@ function closeAllMenu() {
 
 // Navbar
 
-window.onscroll = function name() { 
+window.onscroll = function() { 
+
+    let dropdown = document.querySelector(".dropdown-1");
+
+    if (dropdown.style.display == "block") {
+        return;
+    }
 
     if (window.scrollY != 0) {
         
@@ -120,6 +129,14 @@ window.onscroll = function name() {
 
         banner.setAttribute('style','margin-top:15px');
 
+    }
+
+}
+
+window.onresize = function() {
+    
+    if (document.body.clientWidth > 770) {
+        document.querySelector(".dropdown-1").style.display = "none";
     }
 
 }
