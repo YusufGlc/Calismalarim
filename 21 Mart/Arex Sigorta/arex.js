@@ -2,11 +2,11 @@
 function EkTeslimatlar() {
     let grid = document.querySelector(".sc-3 .grid-2");
 
-    if (grid.style.display=="none") {
-        grid.style.display="grid";
+    if (grid.style.display=="grid") {
+        grid.style.display="none";
     }
     else{
-        grid.style.display="none";
+        grid.style.display="grid";
     }
     AOS.init();
 }
@@ -22,6 +22,7 @@ function dropdownClick() {
     }
     else{
         item.setAttribute("style","display: block;")
+        nav.setAttribute("style","position: fixed; box-shadow: 0 1px 25px 1px gray; height: 100%")
     }
 
 }
@@ -135,9 +136,20 @@ window.onscroll = function() {
 
 window.onresize = function() {
     
-    if (document.body.clientWidth > 770) {
+    if (document.body.clientWidth > 987) {
         document.querySelector(".dropdown-1").style.display = "none";
+        document.querySelector(".navbar").style.height="auto";
     }
 
 }
+
+
+document.querySelector("#tc").addEventListener("input",function deneme(e) {
+    console.log(e)
+    if (Number.isInteger(e.data)==false) {
+        e.target.value = "";
+    }
+})
+
+
 

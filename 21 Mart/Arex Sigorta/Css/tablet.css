@@ -79,15 +79,15 @@ form .item {
 }
 
 .sc-footer .box-1 {
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center !important;
 }
 
-.sc-footer .box-1 .item-1 {
+.sc-footer .box-1 .box-item-1 {
     width: 100% !important;
 }
 
-.sc-footer .box-1 .item-2 {
+.sc-footer .box-1 .box-item-2 {
     width: 100% !important;
     padding-left: 0px !important;
     display: flex;

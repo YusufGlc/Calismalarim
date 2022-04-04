@@ -34,15 +34,17 @@ ul {
 }
 
 .overly {
-    background-color: black;
-    opacity: 80%;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    background-color: rgba(12,34,75,.7);
+
     top: 0;
     z-index: 1;
     display: none;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+
+
 }
 
 nav {
@@ -69,6 +71,11 @@ nav button {
     z-index: 100;
 }
 
+nav .container {
+    width: 80%;
+    padding: 0;
+}
+
 nav .container img {
     z-index: 100;
 }
@@ -88,7 +95,7 @@ nav .hidden-box {
     left: 0;
     z-index: 10 !important;
     padding: 30px;
-    padding-top: 10px;
+    padding-top: 22px;
     display: none;
     transform: translateZ(-100px);
 }
@@ -98,7 +105,8 @@ nav .hidden-box .grid {
     z-index: 10 !important;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-gap: 40px;
+    grid-row-gap: 5px !important;
+    grid-column-gap: 20px !important;
     width: 100%;
     background-color: white;
     padding: 30px;
@@ -106,6 +114,7 @@ nav .hidden-box .grid {
     border-end-start-radius: 20px;
     flex-wrap: wrap;
     cursor: default;
+    box-shadow: 0 2px 5px #707070;
 }
 
 nav .hidden-box ul {
@@ -116,12 +125,13 @@ nav .hidden-box ul {
 nav .hidden-box ul li h6 {
     color: #ef8013;
     font-weight: 700;
-    font-size: 17px;
+    font-size: 16px;
     cursor: text;
 }
 
 nav .hidden-box a {
     color: #15324b;
+    font-size: 14px;
 }
 
 nav .hidden-box a:hover {
@@ -129,18 +139,60 @@ nav .hidden-box a:hover {
     color: #15324b;
 }
 
-/* Urunler Menu */
-nav .urunler-box .box-1 {
+nav .hidden-box .box-1 {
     display: flex;
-    background-color: #09317C;
-    padding: 20px 40px;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px !important;
+    border-radius: 15px !important;
     color: white;
     width: 100%;
     margin: 0 auto;
-    border-radius: 20px;
-    margin-top: 50px;
+    background-color: #09317C;
+    margin-top: 20px;
+    max-width: 1000px;
 }
 
+nav .hidden-box .box-1 .box-item-1 h6 span {
+    color: #159bf5 !important;
+}
+
+nav .hidden-box .box-1 .box-item-1 p {
+    font-size: 13px;
+    opacity: 0.7;
+    margin: 0;
+}
+
+nav .hidden-box .box-1 .box-item-1 {
+    padding-right: 20px;
+}
+
+nav .hidden-box .box-1 .box-item-2 {
+    height: 70%;
+    width: 25%;
+}
+
+nav .hidden-box .box-1 button {
+    height: 100%;
+    width: 100%;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+}
+
+nav .hidden-box .box-2 img {
+    height: 100%;
+    width: 100%;
+    max-width: 80px;
+}
+
+nav .hidden-box .box-2 .box-item-2 {
+    height: 70%;
+    width: 12%;
+}
+
+/* Urunler Menu */
 nav .urunler-box ul li {
     margin: 10px 0;
 }
@@ -151,14 +203,9 @@ nav .urunler-box ul li {
     left: 120px !important;
 }
 
-.kurumsal-box .grid,.acente-box .grid, .hasarYardım-box .grid {
-    grid-row-gap: 20px !important;
-}
-
-
 /* Acente Menu */
 .acente-box {
-    left: 380px !important;
+    left: 20% !important;
 }
 
 .acente-box .grid {
@@ -170,13 +217,19 @@ nav .urunler-box ul li {
     left: 120px !important;
 }
 
+.hasarYardım-box .hasarYardım-grid .box-1 .box-item-1 a {
+    color: white;
+    font-weight: 700;
+}
+
 /* Keşfet Menu */
 .kesfet-box {
-    left: 50% !important;
+    left: 40% !important;
 }
 
 .kesfet-box .grid {
     grid-template-columns: auto auto !important;
+
 }
 
 
@@ -203,7 +256,10 @@ nav .urunler-box ul li {
     width: 300px;
 }
 
-
+.nav-a{
+    border-bottom: 4px solid transparent;
+    transition: .4s linear;
+}
 
 
 /* Form */
@@ -211,29 +267,37 @@ form {
     display: flex;
     padding: 30px 20px;
     background-color: white;
-    box-shadow: 0 5px 25px gray;
+    box-shadow: 0 2px 15px gray;
     width: 80%;
-    margin: 40px auto;
+    margin: 30px auto;
+    padding-bottom: 50px;
     justify-content: center;
+    align-items: flex-end;
+    border-radius: 20px;
 }
 
 form .item {
     width: 22%;
-    height: 50px;
+    height: 65px;
     
 }
 
 form .item label {
-    font-size: 11px;
+    font-size: 13px;
+    margin-bottom: 8px;
 }
 
 form .item input {
+ 
     width: 90%;
     height: 40px;
     border-radius: 10px;
     border-width: 1px;
     border-style: solid;
     border-color: rgb(209, 209, 209);
+    outline: 0 !important;
+    padding: 12px;
+    font-size: 14px;
 }
 
 form button {
@@ -241,7 +305,7 @@ form button {
     height: 45px;
     border: none;
     border-radius: 15px;
-    margin: auto;
+    margin: 0 auto;
     background-image: linear-gradient(to right,#E44123,#F2910F);
     position: relative;
 }
@@ -263,7 +327,7 @@ form button i {
 /* sections */
 .sc {
     text-align: center;
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -280,16 +344,12 @@ form button i {
 
 /* sc-1 */
 .sc-1 {
-    padding: 100px 0;
+    padding: 30px 0;
 }
 
-
-
-
-
 /* sc-2 */
-.bg-2 {
-    padding: 50px 0;
+.sc-2 {
+    padding: 30px 0;
 }
 
 .sc-2 .container {
@@ -352,8 +412,7 @@ form button i {
 
 /* sc-3 */
 .sc-3 {
-    padding: 70px 0;
-    padding-bottom: 100px;
+    padding: 30px 0;
 }
 
 .sc-3 .grid {
@@ -400,8 +459,7 @@ form button i {
 
 /* sc-4 */
 .sc-4 {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding: 30px 0;
 }
 
 .sc-4 button {
@@ -420,8 +478,7 @@ form button i {
 
 /* sc-5 */
 .sc-5 {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 30px 0;
 }
 
 .sc-5 .grid {
@@ -449,8 +506,7 @@ form button i {
 /* sc-6 */
 .sc-6 {
     text-align: start;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 30px 0;
 }
 
 .sc-6 h3 {
@@ -493,17 +549,15 @@ form button i {
 
 /* sc-7 */
 .sc-7 {
-    width: 90%;
-    padding-top: 70px;
-    padding-bottom: 100px;
+    width: 80%;
+    padding: 30px 0;
 }
 
 .sc-7 .container-1 {
     display: flex;
     text-align: start;
     margin: 0 auto;
-    padding: 10px 20px;
-    width: 80% ;
+    width: 100% ;
     justify-content: center;
 }
 
@@ -658,24 +712,24 @@ footer .sc-footer .box-1 {
     margin-top: 50px;
 }
 
-footer .sc-footer .box-1 .item-1 {
+footer .sc-footer .box-1 .box-item-1 {
     width: 50%;
 }
 
-footer .sc-footer .box-1 .item-1 h6 span {
+footer .sc-footer .box-1 .box-item-1 h6 span {
     color: #159BF5;
 }
 
-footer .sc-footer .box-1 .item-1 p {
+footer .sc-footer .box-1 .box-item-1 p {
     font-size: 13px;
     font-weight: 100;
 }
 
-footer .sc-footer .box-1 .item-2 {
+footer .sc-footer .box-1 .box-item-2 {
     padding-left: 15%;
 }
 
-footer .sc-footer .box-1 .item-2 button {
+footer .sc-footer .box-1 .box-item-2 button {
     margin-top: 30px;
     padding: 10px;
     background-image: linear-gradient(to right,#E44123,#F2910F);
@@ -740,7 +794,7 @@ nav .dropdown-button {
 }
 
 
-@media (max-width:770px) {
+@media (max-width:1000px) {
 
     nav .container {
         width: 93%;
@@ -850,3 +904,4 @@ nav .dropdown-button {
 
 
 }
+
