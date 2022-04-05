@@ -39,8 +39,6 @@
     <nav class="navbar" onmouseleave="closeAllMenu()">
       <div class="container">
         
-        <button class="dropdown-button" onclick="dropdownClick()"><i class="fa-solid fa-bars"></i></button>
-
         <img src="./Css/İmages/Logo.png" alt="" width="140px">
 
         
@@ -51,6 +49,8 @@
         <a class="nav-a kesfet-a" onmouseenter="kesfetHover()">Keşfet</a>
 
         <button class="btn-1">Online İşlemler</button>
+
+        <button class="dropdown-button" onclick="dropdownClick()"><i class="fa-solid fa-bars"></i></button>
 
       </div>
 
@@ -297,7 +297,7 @@
 
       <div class="item">
         <label for="tc">T.C Kimlik No</label><br>
-        <input type="text" id="tc">
+        <input type="text" oninput="onlyNumber(event)" id="tc">
       </div>
 
       <div class="item">
@@ -307,7 +307,7 @@
 
       <div class="item">
         <label for="tel">Telefon Numarası</label><br>
-        <input type="text" id="tel">
+        <input type="text" oninput="onlyNumber(event)" id="tel">
       </div>
 
       <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>

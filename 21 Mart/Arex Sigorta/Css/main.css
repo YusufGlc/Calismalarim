@@ -87,6 +87,7 @@ nav .container button {
 .nav-a:hover {
     transition: 0.2s;
     border-bottom: 4px #09317C solid;
+    opacity: 1;
 }
 
 nav .hidden-box {
@@ -258,6 +259,8 @@ nav .urunler-box ul li {
 .nav-a{
     border-bottom: 4px solid transparent;
     transition: .4s linear;
+    font-weight: 500;
+    opacity: .6;
 }
 
 
@@ -709,6 +712,7 @@ footer .sc-footer .box-1 {
     margin: 0 auto;
     border-radius: 20px;
     margin-top: 50px;
+    align-items: center;
 }
 
 footer .sc-footer .box-1 .box-item-1 {
@@ -722,6 +726,7 @@ footer .sc-footer .box-1 .box-item-1 h6 span {
 footer .sc-footer .box-1 .box-item-1 p {
     font-size: 13px;
     font-weight: 100;
+    opacity: .7;
 }
 
 footer .sc-footer .box-1 .box-item-2 {
@@ -729,12 +734,13 @@ footer .sc-footer .box-1 .box-item-2 {
 }
 
 footer .sc-footer .box-1 .box-item-2 button {
-    margin-top: 30px;
     padding: 10px;
     background-image: linear-gradient(to right,#E44123,#F2910F);
     color: white;
     border: none;
     border-radius: 10px;
+    font-weight: 600;
+    height: 60px;
 }
 
 footer .box-2 {
@@ -796,8 +802,11 @@ nav .dropdown-button {
 @media (max-width:1000px) {
 
     nav .container {
-        width: 93%;
         max-width: none;
+    }
+
+    nav .container img {
+        width: 130px;
     }
 
     nav .nav-a,nav .btn-1 {

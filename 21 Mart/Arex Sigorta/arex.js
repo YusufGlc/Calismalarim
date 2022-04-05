@@ -143,13 +143,20 @@ window.onresize = function() {
 
 }
 
+function onlyNumber(e) {
 
-document.querySelector("#tc").addEventListener("input",function deneme(e) {
-    console.log(e)
-    if (Number.isInteger(e.data)==false) {
-        e.target.value = "";
+    if (Number.isInteger(parseInt(e.data))==false && e.data != null) {
+        
+        e.target.value = e.target.value.substring(0,e.target.value.length-1);
+
     }
-})
+    else if (e.target.value.length > 12) {
+        
+        e.target.value = e.target.value.substring(0,e.target.value.length-1);
 
+    }
+    
+    
+} 
 
 
