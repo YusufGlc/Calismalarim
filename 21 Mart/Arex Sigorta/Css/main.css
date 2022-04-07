@@ -636,12 +636,11 @@ footer .sc-footer {
 
 footer .sc-footer .container-1 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 footer .sc-footer .container-1 .item {
     margin-top: 30px;
-    margin-right: 5%;
 }
 
 footer .sc-footer .container-1 .item:last-child {
@@ -831,10 +830,6 @@ nav .dropdown-button {
         width: 80% !important;
         margin: 0 auto !important;
     }
-
-    .sc-footer .container-1 .item {
-        flex: auto;
-    }
     
     .sc-footer .container-1 .item-4 {
         width: 100% !important;
@@ -890,7 +885,7 @@ nav .dropdown-button {
     }
 
     .sc-footer .container-1 .item-4 li img {
-        width: 50%;
+        width: 70%;
     }
 
     .sc-footer .container-1 .item-4 li .texts p {
