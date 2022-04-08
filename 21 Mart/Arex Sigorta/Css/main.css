@@ -622,11 +622,11 @@ form button i {
 
 /* footer */
 
-footer * {
+.footer * {
     text-align: start;
 }
 
-footer .sc-footer {
+.footer .sc-footer {
     padding-top: 10px;
     padding-bottom: 60px;
     width: 100%;
@@ -634,55 +634,55 @@ footer .sc-footer {
     padding-right: 10px;
 }
 
-footer .sc-footer .container-1 {
+.footer .sc-footer .container-1 {
     display: flex;
     justify-content: space-between;
 }
 
-footer .sc-footer .container-1 .item {
+.footer .sc-footer .container-1 .item {
     margin-top: 30px;
 }
 
-footer .sc-footer .container-1 .item:last-child {
+.footer .sc-footer .container-1 .item:last-child {
     margin-right: 0;
     width: 30%;
 }
 
-footer .sc-footer .container-1 .item ul{
+.footer .sc-footer .container-1 .item ul{
     list-style-type: none;
     padding: 0;
     margin: 0;
     margin-top: 30px;
 }
 
-footer .sc-footer .container-1 .item ul li {
+.footer .sc-footer .container-1 .item ul li {
     margin-top: 10px;
 }
 
-footer .sc-footer .container-1 .item ul li a {
+.footer .sc-footer .container-1 .item ul li a {
     color: #15324B;
     font-size: 14px;
 }
 
-footer .sc-footer .container-1 .item ul li a:hover {
+.footer .sc-footer .container-1 .item ul li a:hover {
     color: #2691FB;
 }
 
-footer .sc-footer .container-1 .item-4 ul li {
+.footer .sc-footer .container-1 .item-4 ul li {
     display: flex;
     
 }
 
-footer .sc-footer .container-1 .item-4 ul li .texts {
+.footer .sc-footer .container-1 .item-4 ul li .texts {
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
-footer .sc-footer .container-1 .item-4 ul li .texts p {
+.footer .sc-footer .container-1 .item-4 ul li .texts p {
     font-size: 12px;
 }
 
-footer .sc-footer .container-1 .item-4 ul li:last-child i {
+.footer .sc-footer .container-1 .item-4 ul li:last-child i {
     color: #707070;
     padding: 10px;
     font-size: 18px;
@@ -692,7 +692,7 @@ footer .sc-footer .container-1 .item-4 ul li:last-child i {
     height: 40px;
 }
 
-footer .sc-footer .container-1 .item-4 ul li:last-child img {
+.footer .sc-footer .container-1 .item-4 ul li:last-child img {
     height: 40px;
     width: 40px;
     color: #707070;
@@ -702,7 +702,7 @@ footer .sc-footer .container-1 .item-4 ul li:last-child img {
 }
 
 
-footer .sc-footer .box-1 {
+.footer .sc-footer .box-1 {
     display: flex;
     background-color: #09317C;
     padding: 20px 40px;
@@ -714,25 +714,25 @@ footer .sc-footer .box-1 {
     align-items: center;
 }
 
-footer .sc-footer .box-1 .box-item-1 {
+.footer .sc-footer .box-1 .box-item-1 {
     width: 50%;
 }
 
-footer .sc-footer .box-1 .box-item-1 h6 span {
+.footer .sc-footer .box-1 .box-item-1 h6 span {
     color: #159BF5;
 }
 
-footer .sc-footer .box-1 .box-item-1 p {
+.footer .sc-footer .box-1 .box-item-1 p {
     font-size: 13px;
     font-weight: 100;
     opacity: .7;
 }
 
-footer .sc-footer .box-1 .box-item-2 {
+.footer .sc-footer .box-1 .box-item-2 {
     padding-left: 15%;
 }
 
-footer .sc-footer .box-1 .box-item-2 button {
+.footer .sc-footer .box-1 .box-item-2 button {
     padding: 10px;
     background-image: linear-gradient(to right,#E44123,#F2910F);
     color: white;
@@ -742,7 +742,7 @@ footer .sc-footer .box-1 .box-item-2 button {
     height: 60px;
 }
 
-footer .box-2 {
+.footer .box-2 {
     display: flex;
     background-color: #09317C;
     color: white;
@@ -751,16 +751,16 @@ footer .box-2 {
     align-items: center;
 }   
 
-footer .box-2 img:first-child {
+.footer .box-2 img:first-child {
     height: 30px;
 }
 
-footer .box-2 p {
+.footer .box-2 p {
     margin: 0;
     font-size: 13px;
 }
 
-footer .box-2 img:last-child {
+.footer .box-2 img:last-child {
     height: 17px;
 }
 
@@ -782,6 +782,8 @@ nav .dropdown-1 ul li {
     font-size: 20px;
     padding: 20px 0;
 }
+
+
 
 nav .dropdown-1 button {
     width: 100%;
@@ -848,15 +850,15 @@ nav .dropdown-button {
 }
 
 @media (max-width:500px) {
-    footer .box-2 {
+    .footer .box-2 {
         flex-wrap: wrap;
     }
 
-    footer .box-2 img {
+    .footer .box-2 img {
         width: 30%;
     }
 
-    footer .box-2 p {
+    .footer .box-2 p {
         order: 3;
         margin-top: 20px;
         font-size: 90%;

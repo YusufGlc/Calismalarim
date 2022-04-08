@@ -150,7 +150,7 @@ function onlyNumber(e) {
         e.target.value = e.target.value.substring(0,e.target.value.length-1);
 
     }
-    else if (e.target.value.length > 12) {
+    else if (e.target.value.length > 12 && e.data != null) {
         
         e.target.value = e.target.value.substring(0,e.target.value.length-1);
 
@@ -159,4 +159,16 @@ function onlyNumber(e) {
     
 } 
 
+function DropdownHeaderClick(e) {
+    
+    console.log(e.target.getAttribute("class")+"-items");
+
+    if (box.style.display == "block") {
+        box.style.display = "none";
+    }
+    else {
+        box.style.display = "block";
+    }
+
+}
 
