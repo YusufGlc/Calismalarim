@@ -797,6 +797,17 @@ nav .dropdown-1 button {
 
 nav .dropdown-button {
     display: none;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .dropdown-button div {
+    width: 100%;
+    background-color: black;
+    height: 3px;
+    margin: 3px 0;
 }
 
 
@@ -815,7 +826,8 @@ nav .dropdown-button {
     }
 
     nav .dropdown-button {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 
     nav .dropdown-1 ul {
@@ -908,4 +920,17 @@ nav .dropdown-button {
     }
 
 }
+
+
+/* Animations */
+
+@keyframes DropdownİtemsAnim {
+
+    0% {transform: translateY(50px); opacity: 0.1;}
+
+    100% {transform: translateY(0px); opacity: 1;}
+
+}
+
+
 

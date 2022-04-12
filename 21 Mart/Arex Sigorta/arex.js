@@ -42,60 +42,96 @@ function overlyHide() {
 
 // 
 function urunlerHover() {
-    closeAllMenu();
-    overlyShow();
     let box = document.querySelector(".urunler-box");
-    box.style.display="block";
+    closeAllMenu(box);
+    overlyShow();
+    if (box.style.display != "block") {
+
+        box.setAttribute("style","display: block; animation-name: DropdownİtemsAnim; animation-duration: 0.5s;");
+    }
+    else {
+        box.setAttribute("style","display: block;");
+    }
 
     let urunlerLink = document.querySelector(".urunler-a");
     urunlerLink.appendChild(box);
 }
 
 function kurumsalHover() {
-    closeAllMenu();
-    overlyShow();
     let box = document.querySelector(".kurumsal-box");
-    box.style.display="block";
+    closeAllMenu(box);
+    overlyShow();
+
+    if (box.style.display != "block") {
+
+        box.setAttribute("style","display: block; animation-name: DropdownİtemsAnim; animation-duration: 0.5s;");
+    }
+    else {
+        box.setAttribute("style","display: block;");
+    }
 
     let urunlerLink = document.querySelector(".kurumsal-a");
     urunlerLink.appendChild(box);
 }
 
 function acenteHover() {
-    closeAllMenu();
-    overlyShow();
     let box = document.querySelector(".acente-box");
-    box.style.display="block";
+    closeAllMenu(box);
+    overlyShow();
+
+    if (box.style.display != "block") {
+
+        box.setAttribute("style","display: block; animation-name: DropdownİtemsAnim; animation-duration: 0.5s;");
+    }
+    else {
+        box.setAttribute("style","display: block;");
+    }
 
     let urunlerLink = document.querySelector(".acente-a");
     urunlerLink.appendChild(box);
 }
 
 function hasarYardimHover() {
-    closeAllMenu();
-    overlyShow();
     let box = document.querySelector(".hasarYardım-box");
-    box.style.display="block";
+    closeAllMenu(box);
+    overlyShow();
+
+    if (box.style.display != "block") {
+
+        box.setAttribute("style","display: block; animation-name: DropdownİtemsAnim; animation-duration: 0.5s;");
+    }
+    else {
+        box.setAttribute("style","display: block;");
+    }
 
     let urunlerLink = document.querySelector(".hasarYardım-a");
     urunlerLink.appendChild(box);
 }
 
 function kesfetHover() {
-    closeAllMenu();
-    overlyShow();
     let box = document.querySelector(".kesfet-box");
-    box.style.display="block";
+    closeAllMenu(box);
+    overlyShow();
+
+    if (box.style.display != "block") {
+
+        box.setAttribute("style","display: block; animation-name: DropdownİtemsAnim; animation-duration: 0.5s;");
+    }
+    else {
+        box.setAttribute("style","display: block;");
+    }
 
     let urunlerLink = document.querySelector(".kesfet-a");
     urunlerLink.appendChild(box);
 }
 
-function closeAllMenu() {
+function closeAllMenu(kapatilmiyacak=null) {
     overlyHide();
     let box = document.querySelectorAll(".hidden-box");
     box.forEach(element => {
-        element.style.display="none";
+        if (kapatilmiyacak != element) {
+            element.style.display="none";
+        }
     });
 
 }
@@ -145,30 +181,28 @@ window.onresize = function() {
 
 function onlyNumber(e) {
 
-    if (Number.isInteger(parseInt(e.data))==false && e.data != null) {
-        
-        e.target.value = e.target.value.substring(0,e.target.value.length-1);
-
-    }
-    else if (e.target.value.length > 12 && e.data != null) {
-        
-        e.target.value = e.target.value.substring(0,e.target.value.length-1);
-
-    }
-    
+    Array.from(e.target.value).forEach(element => {
+        if (Number.isInteger(parseInt(element))==false) {
+            e.target.value = e.target.value.replace(element,'');
+        }
+    });
     
 } 
 
-function DropdownHeaderClick(e) {
+function onlyNumberPhone(e) {
+
+    Array.from(e.target.value).forEach(element => {
+        if (Number.isInteger(parseInt(element))==false && element != ' ' && element != '(' && element != ')' && element != '-') {
+            e.target.value = e.target.value.replace(element,'');
+        }
+    });
+
+    $(document).ready(function () {
+        $('#phone').usPhoneFormat({
+            
+            format: '(xxx) xxx-xxxx',
+        });   
+    });
     
-    console.log(e.target.getAttribute("class")+"-items");
-
-    if (box.style.display == "block") {
-        box.style.display = "none";
-    }
-    else {
-        box.style.display = "block";
-    }
-
-}
+} 
 
