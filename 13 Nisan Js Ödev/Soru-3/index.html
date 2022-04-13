@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soru-3</title>
+
+    <style>
+        
+        form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: fit-content;
+            margin: auto;
+            margin-top: 200px;
+        }
+
+        form input {
+            margin-bottom: 10px;
+            width: 200px;
+        }
+
+        form button {
+            width: 208px;
+            padding: 5px;
+            margin-top: 30px;
+        }
+
+        form span {
+            display: none;
+            color: red;
+        }
+
+        form .step-2 {
+            display: none;
+        }
+
+        form .step-2 input {
+            width: 412px;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    
+
+    <form autocomplete="off" no>
+
+        
+        <div class="step-1">
+
+            <label for="ad">Ad</label> 
+            <div>
+                <input type="text" id="ad" class="text-1">
+                <span class="errors" id="ad-error">Bu alan boş bırakılamaz!</span>
+            </div>
+    
+            <label for="soyad">Soyad</label>
+            <div>
+                <input type="text" id="soyad" class="text-2">
+                <span class="errors" id="soyad-error">Bu alan boş bırakılamaz!</span>
+            </div>
+
+            <button id="devam" onclick="button1_Clicked(event)" type="button" >Devam</button>
+
+        </div>
+
+        <div class="step-2">
+
+            <label for="mail">Mail</label>
+            <div>
+                <input type="text" id="mail" class="text-3">
+                <span class="errors" id="mail-error">Bu alan boş bırakılamaz!</span>
+            </div>
+
+            <label for="parola">Parola</label>
+            <div>
+                <input type="text" id="parola" class="text-3">
+                <span class="errors" id="parola-error">Bu alan boş bırakılamaz!</span>
+            </div>
+
+            <button id="geri" onclick="button3_Clicked(event)" type="button" >Geri</button>
+
+            <button id="gonder" onclick="button2_Clicked(event)" type="button" >Gönder</button>
+
+        </div>
+
+
+
+    </form>
+
+    <script src="./javaScript.js"></script>
+
+
+</body>
+</html>

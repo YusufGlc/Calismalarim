@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soru-1</title>
+
+    <style>
+        
+        form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: fit-content;
+            margin: auto;
+            margin-top: 200px;
+        }
+
+        form input {
+            margin-bottom: 10px;
+        }
+
+        form button {
+            width: 178px;
+        }
+
+        form span {
+            display: none;
+            color: red;
+        }
+
+        table {
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <form autocomplete="off" no>
+
+        <label for="urun-ad">Ürün Ad</label> 
+        <div>
+            <input type="text" id="urun-ad" class="text-1">
+            <span class="errors" id="urun-ad-error">Bu alan boş bırakılamaz!</span>
+        </div>
+
+        <label for="urun-adet">Ürün adet</label>
+        <div>
+            <input type="text" id="urun-adet" class="text-2">
+            <span class="errors" id="urun-adet-error">Bu alan boş bırakılamaz!</span>
+        </div>
+
+
+        <label for="urun-fiyat">Ürün fiyat</label>
+        <div>
+            <input type="text" id="urun-fiyat" class="text-3">
+            <span class="errors" id="urun-fiyat-error">Bu alan boş bırakılamaz!</span>
+        </div>
+
+
+        <button id="gonder" type="button">Kaydet</button>
+
+    </form>
+
+
+    <table id="table" border="1px">
+
+        <tr>
+            <th>Ürün Ad</th>
+            <th>Ürün adet</th>
+            <th>Ürün fiyat</th>
+        </tr>
+
+
+        
+    </table>
+
+
+    <script src="./javaScript.js"></script>
+
+
+</body>
+</html>
