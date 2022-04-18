@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soru 4</title>
+
+    <style>
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: sans-serif;
+        }
+
+        form ul {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        form ul li {
+            width: 190px;
+            display: flex;
+            margin: 10px 0;
+            justify-content: center;
+        }
+
+        form ul li label {
+            width: 90px;
+        }
+
+        form button {
+            width: 100px;
+            height: 50px;
+        }
+
+        form progress {
+            height: 30px;
+            width: 100px;
+            margin: auto;
+            margin-left: 20px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+
+    <form>
+
+        <h1>Hangi Takımlısınız ?</h1>
+
+        <ul>
+
+            <li>
+                <label for="gs">Galatasaray</label>
+                <input type="radio" class="radioBtn" name="takim" id="gs">
+            </li>
+
+            <li>
+                <label for="fb">Fenerbahçe</label>
+                <input type="radio" class="radioBtn" name="takim" id="fb">
+            </li>
+
+            <li>
+                <label for="bjk">Beşiktaş</label>
+                <input type="radio" class="radioBtn" name="takim" id="bjk">
+            </li>
+
+            <li>
+                <label for="trabzon">TrabzonSpor</label>
+                <input type="radio" class="radioBtn" name="takim" id="trabzon">
+            </li>
+
+        </ul>
+
+
+        <button type="button" id="gonder">Gönder</button>
+
+
+        <ul>
+            <li>
+                <label>Galatasaray</label>
+                <progress class="takimOy" value="0" max="100"></progress>
+            </li>
+
+            <li>
+                <label>Fenerbahçe</label>
+                <progress class="takimOy" value="0" max="100"></progress>
+            </li>
+
+            <li>
+                <label>Beşiktaş</label>
+                <progress class="takimOy" value="0" max="100"></progress>
+            </li>
+
+            <li>
+                <label>TrabzonSpor</label>
+                <progress class="takimOy" value="0" max="100"></progress>
+            </li>
+
+        </ul>
+
+    </form>
+    
+    
+    <script src="./javaScript.js"></script>
+
+</body>
+</html>

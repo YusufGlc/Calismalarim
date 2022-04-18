@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soru 5</title>
+
+    <style>
+        
+        form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: fit-content;
+            margin: auto;
+            margin-top: 200px;
+        }
+
+        form input {
+            margin-bottom: 10px;
+        }
+
+        form button {
+            width: 178px;
+        }
+
+        form span {
+            display: none;
+            color: red;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <form autocomplete="off" no>
+
+        <label for="mail">Mail</label>
+        <div>
+            <input type="text" id="mail" class="text-3">
+            <span class="errors" id="mail-error">Geçerli bir mail giriniz</span>
+        </div>
+
+
+        <button id="gonder" type="button" onclick="Email()">Gönder</button>
+
+    </form>
+
+    <script src="./javaScript.js"></script>
+
+
+</body>
+</html>
