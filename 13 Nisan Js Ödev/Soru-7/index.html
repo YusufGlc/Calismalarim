@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soru 7</title>
+
+</head>
+<body>
+
+
+
+    <textarea oninput="uzunlukAlma(event)" cols="30" rows="10" maxlength="100" style="transition: 0.5s;"></textarea>
+    
+    <p>100</p>
+
+
+    <script>
+
+
+        var sayi = document.querySelector("textarea").maxLength;
+
+        var uzunluk
+
+        function uzunlukAlma(e) {
+            
+            document.querySelector("p").textContent = sayi - e.target.value.length;
+
+            let textarea = document.querySelector("textarea");
+
+            if (e.target.value.length == 100) {
+            
+
+                e.target.style.boxShadow = "1px 1px 10px red";
+        
+
+            }
+            else {
+                e.target.style.boxShadow = "none";
+            }
+
+        }
+        
+
+    </script>
+    
+</body>
+
+</html>

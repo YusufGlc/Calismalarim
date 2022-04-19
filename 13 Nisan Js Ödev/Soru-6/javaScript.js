@@ -8,18 +8,29 @@ JSON.stringify([{
     Kelime: "Selam"
 }, {
     Kelime: "Lorem"
+}, {
+    Kelime: "yusuf"
 }])
 
 );
 
-console.log(localStorage.getItem("kelimeler"));
+var kelimeler = JSON.parse(localStorage.getItem("kelimeler"))
 
 document.getElementById("text").addEventListener("input",function(e) {
 
     let text = e.target.value;
     
 
-    text = text.replace(reg,'***');
+    
+    kelimeler.forEach(element => {
+        
+        let reg = new RegExp(element.Kelime,"gi");
+
+        console.log(reg);
+
+        text = text.replace(reg,'***');
+
+    });
 
     
 
