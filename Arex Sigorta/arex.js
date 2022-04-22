@@ -151,20 +151,14 @@ window.onscroll = function() {
         
         let nav = document.querySelector(".navbar")
 
-        nav.setAttribute('style', 'position:fixed !important; box-shadow: 0 1px 25px 1px gray;');
+        nav.setAttribute('style', 'box-shadow: 0 1px 25px 1px gray;');
 
-        let banner = document.querySelector(".banner");
-        banner.setAttribute('style','margin-top:75px');
     }
     else{
 
         let nav = document.querySelector(".navbar")
 
         nav.setAttribute('style', 'box-shadow:none');
-
-        let banner = document.querySelector(".banner");
-
-        banner.setAttribute('style','margin-top:15px');
 
     }
 

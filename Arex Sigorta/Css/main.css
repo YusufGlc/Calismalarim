@@ -53,6 +53,7 @@ nav {
     z-index: 30 !important;
     background-color: white;
     transition: 0.5s;
+    position: fixed !important;
 }
 
 nav a {
@@ -240,6 +241,7 @@ nav .urunler-box ul li {
     margin: 0 auto;
     display: flex;
     margin-top: 60px !important;
+    padding-top: 50px;
 }
 
 .banner .div-1 {
