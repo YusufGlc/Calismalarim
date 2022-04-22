@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soru 8</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+
+        .sepet {
+            float: right;
+            width: 80px;
+            height: 50px;
+        }
+
+        .sepet i {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        .sepet .badge {
+            font-size: 15px;
+        }
+
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding-top: 100px;
+        }
+
+        form label {
+            display: inline-block;
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        form button {
+            display: block;
+            margin: 20px auto;
+        }
+
+        .sepet-icerik {
+            background-color: white;
+            box-shadow: 1px 5px 20px gray;
+            outline: gray outset 1px;
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(70%,-50%);
+            display: none;
+        }
+
+        .sepet-icerik .sepet-table {
+            margin: 0 auto;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .sepet-CloseBtn {
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
+            float: right;
+            margin: 20px;
+            padding: 0;
+        }
+
+        .sepet-CloseBtn:hover {
+            border: none;
+            background-color: red;
+            cursor: pointer;
+        }
+
+        .sepet-icerik .sepet-table thead th {
+            padding: 20px;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+
+    <button onclick="SepetClicked()" class="sepet"><i class="fa-solid fa-basket-shopping"></i><span class="badge">0</span></button>
+
+    <form autocomplete="off">
+
+        <label for="urunAd">Ürün adı</label>
+        <input id="urunAd" type="text">
+        <br>
+        <label for="adet">Adet</label>
+        <input type="text" id="adet">
+        <br>
+        <label for="fiyat">Fiyatı</label>
+        <input type="text" id="fiyat">
+        <br>
+        <button type="button" onclick="SepeteEkle()">Sepete Ekle</button>
+
+    </form>
+
+    <div class="sepet-icerik">
+        
+        <button class="sepet-CloseBtn" onclick="SepetKapat()">X</button>
+
+        <table class="sepet-table">
+
+            <thead>
+                <th>Ürün adı</th>
+                <th>Adeti</th>
+                <th>Fiyatı</th>
+            </thead>
+
+            <tbody>
+
+                
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script src="./javaScript.js"></script>
+    
+</body>
+</html>

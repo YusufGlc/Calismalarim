@@ -30,14 +30,15 @@
             let textarea = document.querySelector("textarea");
 
             if (e.target.value.length == 100) {
-            
-
+                
+                e.target.style.outline = "none";
+                e.target.style.border = "2px red solid"
                 e.target.style.boxShadow = "1px 1px 10px red";
         
 
             }
             else {
-                e.target.style.boxShadow = "none";
+                e.target.style = "none";
             }
 
         }
