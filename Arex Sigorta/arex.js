@@ -183,20 +183,5 @@ function onlyNumber(e) {
     
 } 
 
-function onlyNumberPhone(e) {
 
-    Array.from(e.target.value).forEach(element => {
-        if (Number.isInteger(parseInt(element))==false && element != ' ' && element != '(' && element != ')' && element != '-') {
-            e.target.value = e.target.value.replace(element,'');
-        }
-    });
-
-    $(document).ready(function () {
-        $('#phone').usPhoneFormat({
-            
-            format: '(xxx) xxx-xxxx',
-        });   
-    });
-    
-} 
 

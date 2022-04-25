@@ -64,6 +64,10 @@ form .item {
     flex-wrap: wrap-reverse;
 }
 
+.sc-6 .accordion-item {
+    max-width: none;
+}
+
 .sc-6 .container .item-1 {
     width: 100%;
     margin-right: 0;
@@ -72,11 +76,6 @@ form .item {
 .sc-6 .container .item-2 {
     margin-top: 30px;
     width: 100%;
-}
-
-
-.sc-7 .container-1 .item {
-    flex-direction: column;
 }
 
 .sc-footer .box-1 {
