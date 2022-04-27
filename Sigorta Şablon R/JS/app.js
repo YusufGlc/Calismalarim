@@ -63,6 +63,51 @@ function filter(id, datas) {
 }
 
 
+
+function cardHover(e) {
+
+    let offerİd = e.target.id;
+
+    let image = document.querySelector("#"+offerİd+" img");
+
+    image.src = "./img/"+image.className+"White.png";
+
+}
+
+function cardLeave(e) {
+
+    let offerİd = e.target.id;
+
+    let image = document.querySelector("#"+offerİd+" img");
+
+    image.src = "./img/"+image.className+"Gray.png";
+
+}
+
+
+
 goStageAllForms();
 initIMask();
 AOS.init();
+
+
+$('.slick').slick({
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1150,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });

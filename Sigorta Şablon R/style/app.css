@@ -5,10 +5,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body{
-    padding: 0 10px;
-}
-
 button {
     cursor: pointer !important;
 }
@@ -20,6 +16,7 @@ button {
 .align-center {
     max-width: 1180px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .backGround {
@@ -98,6 +95,24 @@ nav .container-1 .container-2 i:last-child {
     margin-left: 5px;
 }
 
+.backGround-3 {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -10;
+    width: 40%;
+    max-width: 300px;
+    
+    height: auto;
+}
+
+nav .container-1 .dropdown {
+    width: 30px;
+    display: none;
+}
+
 @media (max-width:1921px){
     .backGround {
         display: none;
@@ -109,12 +124,54 @@ nav .container-1 .container-2 i:last-child {
 
 }
 
+@media (max-width:1150px) {
+
+    .align-center {
+        padding: 0;
+    }
+
+    .backGround-2 {
+        display: none;
+    }
+
+    .backGround-3 {
+        display: block;
+    }
+
+    nav .container-1 .container-2 {
+        display: none;
+    }
+
+    nav .container-1 .dropdown {
+        display: block;
+    }
+
+    .align-center {
+        max-width: 80%;
+    }
+
+}
+
+@media (max-width:640px) {
+
+    nav .container-1 h1 {
+        font-size: 15px;
+    }
+
+    nav .container-1 .dropdown {
+        width: 20px;
+        transform: translateY(-5px);
+    }
+    
+}
+
+
 
 /* Banner */
 
 .banner {
     margin-top: 5.5%;
-    
+    height: 570px;
 }
 
 @media (min-width:1921px){
@@ -125,7 +182,6 @@ nav .container-1 .container-2 i:last-child {
 
 .banner .banner-texts {
     width: 100%;
-    padding-right: 55%;
 }
 
 .banner .banner-texts span {
@@ -185,7 +241,7 @@ nav .container-1 .container-2 i:last-child {
 
     display: grid;
     grid-template-columns: 140px 140px 140px 140px;
-    grid-column-gap: 15px;
+    grid-column-gap: 25px;
 }
 
 .banner .offers .offer {
@@ -202,7 +258,7 @@ nav .container-1 .container-2 i:last-child {
     justify-content: center;
     align-items: center;
 
-    transition: 1s;
+    transition: .1s;
 
 }
 
@@ -221,6 +277,7 @@ nav .container-1 .container-2 i:last-child {
     font-weight: 700;
     text-align: center;
     margin: 10px 0;
+    font-size: 12px;
 }
 
 .banner .offers .offer button {
@@ -228,21 +285,219 @@ nav .container-1 .container-2 i:last-child {
     display: none;
     margin: 10px 0;
     background-image: linear-gradient(180deg,#803B8E,#CC3995);
-    font-size: 10;
+    font-size: 10px;
     font-weight: 500;
     color: white;
     border-radius: 50px;
-    padding: 5px 10px;
+    padding: 5px 15px;
 }
 
 .banner .offers .offer:hover {
-    height: 200px;
-}
-
-.banner .offers .offer:hover button{
-    display: block;
+    box-shadow: 0px 5px 30px rgb(102, 57, 166, .5);
 }
 
 .banner .offers .offer:hover img {
     background-image: linear-gradient(180deg,#8A3F96,#6B337E,#CE3995);
+}
+
+@media (min-width:1150px){
+
+    .banner .offers .offer:hover button{
+        display: block;
+    }
+
+    .banner .offers .offer:hover {
+        height: 187px;
+    }
+
+}
+
+@media (max-width:780px) {
+
+    .banner {
+        height: 650px;
+    }
+
+    .banner .offers {
+        grid-template-columns: 140px 140px;
+        grid-gap: 35px 15px;
+        margin-top: 40px;
+    }
+
+}
+
+@media (max-width:640px) {
+
+    .banner {
+        margin-top: 10px;
+        height: 500px;
+    }
+
+    .banner .banner-texts span {
+        font-size: 14px;
+    }
+
+    .banner .banner-texts h1 {
+        font-size: 29px;
+    }
+
+    .banner .banner-texts p {
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .banner .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .banner .buttons button {
+        height: 45px;
+        font-size: 10px;
+    }
+
+    .banner .buttons button:first-child {
+        margin-right: 40px;
+    }
+
+    .banner .offers {
+        grid-template-columns: 111px 111px;
+        justify-content: center;
+    }
+
+    .banner .offers .offer {
+        height: 110px;
+    }
+
+    .banner .offers .offer img {
+        width: 28px;
+        height: auto;
+        margin-top: 0px;
+        padding: 15px;
+    }
+
+    .banner .offers .offer h6 {
+        font-size: 7px;
+        margin-bottom: 0px;
+        padding-right: 10px;
+    }
+
+    
+}
+
+
+.gray-bg {
+    width: 100%;
+    height: 1000px;
+    background-color: rgb(218, 217, 219, .1);
+}
+
+.advantages h2 {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.advantages .slick {
+    text-align: center;
+}
+
+.advantages .slick .slick-item {
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 262px;
+    height: 360px;
+
+    padding: 24px;
+
+    margin-right: 28px;
+
+    box-shadow: 0px 5px 20px rgb(112, 112, 112, .2);
+
+    opacity: .6;
+
+}
+
+.advantages .slick .slick-item span {
+
+    background-color: #DAD9DB;
+    padding: 27px;
+    border-radius: 100px;
+    box-sizing: content-box;
+
+}
+
+.advantages .slick .slick-item img {
+    width: 60px;
+}
+
+.advantages .slick .slick-item h5 {
+
+    margin: 30px 0;
+
+    color: rgb(112, 112, 112, .68);
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+}
+
+.advantages .slick .slick-item p {
+
+    color: rgb(112, 112, 112, .68);
+
+    font-size: 16px;
+    font-weight: 400
+
+}
+
+.slick-dots li button:before
+{
+    font-size: 40px !important;
+    line-height: 20px !important;
+}
+
+.advantages .slick .slick-item:hover {
+    
+    opacity: 1;
+    box-shadow: 0px 5px 30px rgb(102, 57, 166,.5);
+
+}
+
+.advantages .slick .slick-item:hover span {
+    background-image: linear-gradient(#824095,#824E91,#EE3594);
+}
+
+.advantages .slick .slick-item:hover h5 {
+    color: #6639A6;
+}
+
+.advantages .slick .slick-item:hover p {
+    color: black;
+}
+
+@media (max-width:1150px) {
+    .advantages .slick {
+        width: 100% !important;
+        max-width: 500px;
+        margin: 0  auto !important;
+    }
+
+    .advantages .slick .slick-item {
+        margin: 25px;
+        box-shadow: 0px 5px 30px rgb(102, 57, 166,.5);
+    }
+
+    .advantages .slick .slick-item span {
+        background-image: linear-gradient(#824095,#824E91,#EE3594);
+    }
+
 }

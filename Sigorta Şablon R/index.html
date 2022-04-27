@@ -26,11 +26,13 @@
 
 <body>
 
+    <img src="./img/pink-header-bg.png" alt="BackGround" class="backGround-3">
+
 
     <img src="./img/MainPage-BackGround.png" alt="BackGround" class="backGround-2">
 
 
-    <nav>
+    <nav class="align-center">
 
         <div class="container-1">
             <img src="./img/MainPage-BackGround.png" alt="BackGround" class="backGround">
@@ -48,6 +50,8 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
 
             </div>
+
+            <img src="./img/Icon open-menu.png" class="dropdown">
 
         </div>
 
@@ -76,9 +80,8 @@
 
         <div class="offers">
 
-            <div class="offer offer-1">
-
-                <img src="./img/carGray.png" alt="Car">
+            <div class="offer" id="offer-1" onmouseleave="cardLeave(event)" onmouseenter="cardHover(event)">
+                <img src="./img/carGray.png" alt="Car" class="car">
 
                 <h6>Trafik</h6>
 
@@ -86,9 +89,8 @@
 
             </div>
 
-            <div class="offer offer-2">
-
-                <img src="./img/homeGray.png" alt="Home">
+            <div class="offer" id="offer-2" onmouseleave="cardLeave(event)" onmouseenter="cardHover(event)">
+                <img src="./img/homeGray.png" alt="Home" class="home">
 
                 <h6>DASK</h6>
 
@@ -96,9 +98,8 @@
 
             </div>
 
-            <div class="offer offer-3">
-
-                <img src="./img/shieldGray.png" alt="Shield">
+            <div class="offer" id="offer-3" onmouseleave="cardLeave(event)" onmouseenter="cardHover(event)">
+                <img src="./img/shieldGray.png" alt="Shield" class="shield">
 
                 <h6>KASKO</h6>
 
@@ -106,9 +107,8 @@
 
             </div>
 
-            <div class="offer offer-4">
-
-                <img src="./img/healthGray.png" alt="Medical">
+            <div class="offer" id="offer-4" onmouseleave="cardLeave(event)" onmouseenter="cardHover(event)">
+                <img src="./img/medicalGray.png" alt="Medical" class="medical">
 
                 <h6>SAĞLIK</h6>
 
@@ -120,6 +120,73 @@
         </div>
 
         
+    </div>
+
+
+    <div class="gray-bg">
+
+        <div class="advantages align-center">
+
+            <h2>Avantajlarımız</h2>
+
+            <div class="slick">
+                
+                <div class="slick-item" id="slick-item-1" onmouseleave="cardLeave(event)" onmouseenter="cardHover(event)">
+
+                    <span>
+                        <img src="./img/carGray.png" class="car">
+                    </span>
+                    
+
+                    <h5>Uçtan Uca<br>Dijital Hizmet</h5>
+
+                    <p>web sitemiz üzerinden dakikalar içinde sigortanızı yaptırabilirsiniz.</p>
+
+                </div>
+
+                <div class="slick-item" id="slick-item-2" onmouseleave="cardLeave(event)" onmouseenter="cardHover(event)">
+
+                    <span>
+                        <img src="./img/homeGray.png" class="home">
+                    </span>
+                    
+
+                    <h5>Uçtan Uca<br>Dijital Hizmet</h5>
+
+                    <p>web sitemiz üzerinden dakikalar içinde sigortanızı yaptırabilirsiniz.</p>
+
+                </div>
+
+                <div class="slick-item" id="slick-item-3" onmouseleave="cardLeave(event)" onmouseenter="cardHover(event)">
+
+                    <span>
+                        <img src="./img/shieldGray.png" class="shield">
+                    </span>
+                    
+
+                    <h5>Uçtan Uca<br>Dijital Hizmet</h5>
+
+                    <p>web sitemiz üzerinden dakikalar içinde sigortanızı yaptırabilirsiniz.</p>
+
+                </div>
+
+                <div class="slick-item" id="slick-item-4" onmouseleave="cardLeave(event)" onmouseenter="cardHover(event)">
+
+                    <span>
+                        <img src="./img/medicalGray.png" class="medical">
+                    </span>
+                    
+
+                    <h5>Uçtan Uca<br>Dijital Hizmet</h5>
+
+                    <p>web sitemiz üzerinden dakikalar içinde sigortanızı yaptırabilirsiniz.</p>
+
+                </div>
+
+              </div>
+
+        </div>
+
     </div>
 
 
