@@ -66,9 +66,9 @@ function filter(id, datas) {
 
 function cardHover(e) {
 
-    let offerİd = e.target.id;
+    let card_id = e.target.id;
 
-    let image = document.querySelector("#"+offerİd+" img");
+    let image = document.querySelector("#"+card_id+" img");
 
     image.src = "./img/"+image.className+"White.png";
 
@@ -76,9 +76,9 @@ function cardHover(e) {
 
 function cardLeave(e) {
 
-    let offerİd = e.target.id;
+    let card_id = e.target.id;
 
-    let image = document.querySelector("#"+offerİd+" img");
+    let image = document.querySelector("#"+card_id+" img");
 
     image.src = "./img/"+image.className+"Gray.png";
 
