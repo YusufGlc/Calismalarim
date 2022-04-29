@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 
     <title>Anasayfa</title>
 </head>
@@ -80,35 +80,43 @@
 
         <div class="offers">
 
-            <div class="offer" id="offer-1" onmouseleave="cardLeave(event)" onmouseenter="cardHover(event)">
-                <img src="./img/carGray.png" alt="Car" class="car">
+            <div class="offer" id="offer-1">
 
+                <span>
+                    <i class="fa-solid fa-car"></i>
+                </span>
                 <h6>Trafik</h6>
 
                 <button>Teklif Al</button>
 
             </div>
 
-            <div class="offer" id="offer-2" onmouseleave="cardLeave(event)" onmouseenter="cardHover(event)">
-                <img src="./img/homeGray.png" alt="Home" class="home">
+            <div class="offer" id="offer-2">
 
+                <span>
+                    <i class="fa-solid fa-house"></i>
+                </span>
                 <h6>DASK</h6>
 
                 <button>Teklif Al</button>
 
             </div>
 
-            <div class="offer" id="offer-3" onmouseleave="cardLeave(event)" onmouseenter="cardHover(event)">
-                <img src="./img/shieldGray.png" alt="Shield" class="shield">
+            <div class="offer" id="offer-3">
 
+                <span>
+                    <i class="fa-solid fa-shield-halved"></i>
+                </span>
                 <h6>KASKO</h6>
 
                 <button>Teklif Al</button>
 
             </div>
 
-            <div class="offer" id="offer-4" onmouseleave="cardLeave(event)" onmouseenter="cardHover(event)">
-                <img src="./img/medicalGray.png" alt="Medical" class="medical">
+            <div class="offer" id="offer-4">
+                <span>
+                    <i class="fa-solid fa-briefcase-medical"></i>
+                </span>
 
                 <h6>SAĞLIK</h6>
 
@@ -127,14 +135,14 @@
 
         <div class="advantages align-center">
 
-            <h2>Avantajlarımız</h2>
+            <h2 class="header-type-1">Avantajlarımız</h2>
 
             <div class="slick">
                 
-                <div class="slick-item" id="slick-item-1" onmouseleave="cardLeave(event)" onmouseenter="cardHover(event)">
+                <div class="slick-item" id="slick-item-1">
 
                     <span>
-                        <img src="./img/carGray.png" class="car">
+                        <i class="fa-solid fa-car"></i>
                     </span>
                     
 
@@ -144,10 +152,10 @@
 
                 </div>
 
-                <div class="slick-item" id="slick-item-2" onmouseleave="cardLeave(event)" onmouseenter="cardHover(event)">
+                <div class="slick-item" id="slick-item-2">
 
                     <span>
-                        <img src="./img/homeGray.png" class="home">
+                        <i class="fa-solid fa-house"></i>
                     </span>
                     
 
@@ -157,10 +165,10 @@
 
                 </div>
 
-                <div class="slick-item" id="slick-item-3" onmouseleave="cardLeave(event)" onmouseenter="cardHover(event)">
+                <div class="slick-item" id="slick-item-3">
 
                     <span>
-                        <img src="./img/shieldGray.png" class="shield">
+                        <i class="fa-solid fa-shield-halved"></i>
                     </span>
                     
 
@@ -170,10 +178,10 @@
 
                 </div>
 
-                <div class="slick-item" id="slick-item-4" onmouseleave="cardLeave(event)" onmouseenter="cardHover(event)">
+                <div class="slick-item" id="slick-item-4">
 
                     <span>
-                        <img src="./img/medicalGray.png" class="medical">
+                        <i class="fa-solid fa-briefcase-medical"></i>
                     </span>
                     
 
@@ -190,6 +198,72 @@
     </div>
 
 
+    <div class="SSS align-center">
+
+        <h2 class="header-type-1">Sıkça Sorulan Sorular</h2>
+
+        <div class="container-1">
+
+            <img src="./img/S.S.S-image.png">
+
+            <div class="questions">
+
+                <div class="question" id="question-1" onclick="cardClicked(event)">
+                    
+                    <h4>1500'lerden beri kullanılan standart Lorem Ipsum pasajı</h4>
+                    
+                    <div class="answer">
+
+                        <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'ler den beri endüstri standardı sahte metinler olarak kullanılmıştır. Lorem Ipsum, dizgi ve baskı endüstrisinde </p>
+
+                    </div>
+
+                </div>
+
+                <div class="question" id="question-2" onclick="cardClicked(event)">
+                    
+                    <h4>1500'lerden beri kullanılan standart Lorem Ipsum pasajı</h4>
+                    
+                    <div class="answer" >
+
+                        <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'ler den beri endüstri standardı sahte metinler olarak kullanılmıştır. Lorem Ipsum, dizgi ve baskı endüstrisinde </p>
+
+                    </div>
+
+                </div>
+
+                <div class="question" id="question-3" onclick="cardClicked(event)">
+                    
+                    <h4>1500'lerden beri kullanılan standart Lorem Ipsum pasajı</h4>
+                    
+                    <div class="answer">
+
+                        <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'ler den beri endüstri standardı sahte metinler olarak kullanılmıştır. Lorem Ipsum, dizgi ve baskı endüstrisinde </p>
+
+                    </div>
+
+                </div>
+
+                <div class="question" id="question-4" onclick="cardClicked(event)">
+                    
+                    <h4>1500'lerden beri kullanılan standart Lorem Ipsum pasajı</h4>
+                    
+                    <div class="answer">
+
+                        <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'ler den beri endüstri standardı sahte metinler olarak kullanılmıştır. Lorem Ipsum, dizgi ve baskı endüstrisinde </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <button>Tümünü Gör</button>
+        
+    </div>
 
 
 

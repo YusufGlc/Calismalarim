@@ -262,14 +262,17 @@ nav .container-1 .dropdown {
 
 }
 
-.banner .offers .offer img {
+.banner .offers .offer span {
     padding: 20px;
     box-sizing: content-box;
-    width: 35px;
-    height: 30px;
     background-color: #DAD9DB;
     border-radius: 12px;
     margin-top: 20px;
+}
+
+.banner .offers .offer span i {
+    color: gray;
+    font-size: 30px;
 }
 
 .banner .offers .offer h6 {
@@ -296,8 +299,12 @@ nav .container-1 .dropdown {
     box-shadow: 0px 5px 30px rgb(102, 57, 166, .5);
 }
 
-.banner .offers .offer:hover img {
+.banner .offers .offer:hover span {
     background-image: linear-gradient(180deg,#8A3F96,#6B337E,#CE3995);
+}
+
+.banner .offers .offer:hover span i {
+    color: white;
 }
 
 @media (min-width:1150px){
@@ -370,9 +377,7 @@ nav .container-1 .dropdown {
         height: 110px;
     }
 
-    .banner .offers .offer img {
-        width: 28px;
-        height: auto;
+    .banner .offers .offer span {
         margin-top: 0px;
         padding: 15px;
     }
@@ -386,14 +391,14 @@ nav .container-1 .dropdown {
     
 }
 
-
+/* Advantages */
 .gray-bg {
     width: 100%;
-    height: 1000px;
+    height: 566px;
     background-color: rgb(218, 217, 219, .1);
 }
 
-.advantages h2 {
+.header-type-1 {
     font-size: 45px;
     font-weight: 700;
     text-align: center;
@@ -434,8 +439,8 @@ nav .container-1 .dropdown {
 
 }
 
-.advantages .slick .slick-item img {
-    width: 60px;
+.advantages .slick .slick-item i {
+    font-size: 40px;
 }
 
 .advantages .slick .slick-item h5 {
@@ -476,6 +481,10 @@ nav .container-1 .dropdown {
     background-image: linear-gradient(#824095,#824E91,#EE3594);
 }
 
+.advantages .slick .slick-item:hover span i {
+    color: white;
+}
+
 .advantages .slick .slick-item:hover h5 {
     color: #6639A6;
 }
@@ -490,7 +499,7 @@ nav .container-1 .dropdown {
         max-width: 100%;
     }
 
-    .advantages h2 {
+    .header-type-1 {
         font-size: 15px;
     }
 
@@ -503,7 +512,7 @@ nav .container-1 .dropdown {
         box-shadow: 0px 5px 30px rgb(102, 57, 166,.5);
         opacity: 1;
         height: auto;
-        padding: 58px 24px;
+        padding: 28px 24px;
     }
 
     .advantages .slick .slick-item h5 {
@@ -519,7 +528,9 @@ nav .container-1 .dropdown {
         background-image: linear-gradient(#824095,#824E91,#EE3594);
     }
 
-
+    .advantages .slick .slick-item span i {
+        color: white;
+    }
 
     .advantages .slick-list {
         max-width: 500px !important;
@@ -550,4 +561,117 @@ nav .container-1 .dropdown {
     .advantages .slick .slick-item p {
         font-size: 12px;
     }
+}
+
+
+/* S.S.S */
+
+.SSS {
+    height: 800px;
+}
+
+.SSS .container-1 {
+    display: flex;
+}
+
+.SSS .container-1 img {
+    object-fit: contain;
+}
+
+.SSS .container-1 .questions {
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    height: 527px;
+    width: 100%;
+}
+
+.SSS .container-1 .questions .question {
+    border: 1px #DEB9F5 solid;
+    border-left: 13px #E13793 solid;
+    border-radius: 10px;
+    border-top-left-radius: 11px;
+    border-bottom-left-radius: 11px;
+
+    padding: 24px;
+    margin-bottom: 35px;
+
+    cursor: pointer;
+}
+
+.SSS .container-1 .questions .question h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #413E3E;
+}
+
+.SSS .container-1 .questions .question .answer {
+    display: none;
+}
+
+.SSS .container-1 .questions .question .answer p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.SSS button {
+    all: unset;
+    font-size: 13px;
+    font-weight: 500;
+
+    background-image: linear-gradient(90deg,#6639A6,#E83794);
+
+    width: 150px;
+    height: 50px;
+    text-align: center;
+
+    border-radius: 50px;
+    color: white;
+    float: right;
+    margin-top: 30px;
+
+}
+
+
+@media (max-width:1150px) {
+
+    .SSS .container-1 img {
+        display: none;
+    }
+
+    .SSS .container-1 .questions {
+        margin-left: 0;
+        width: 100%;
+    }
+
+}
+
+@media (max-width:730px) {
+
+    .SSS .container-1 .questions {
+        height: auto;
+    }
+
+    .SSS .container-1 .questions .question{
+        padding: 10px;
+    }
+
+    .SSS .container-1 .questions h4 {
+        font-size: 9px !important;
+        text-align: center;
+    }
+
+    .SSS .container-1 .questions .answer p {
+        font-size: 9px !important;
+    }
+
+    .SSS button {
+        margin-top: 0px;
+        width: 73px;
+        height: 24px;
+        font-size: 5px;
+    }
+
 }

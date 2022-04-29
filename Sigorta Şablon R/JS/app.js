@@ -62,30 +62,6 @@ function filter(id, datas) {
     }
 }
 
-
-
-function cardHover(e) {
-
-    let card_id = e.target.id;
-
-    let image = document.querySelector("#"+card_id+" img");
-
-    image.src = "./img/"+image.className+"White.png";
-
-}
-
-function cardLeave(e) {
-
-    let card_id = e.target.id;
-
-    let image = document.querySelector("#"+card_id+" img");
-
-    image.src = "./img/"+image.className+"Gray.png";
-
-}
-
-
-
 goStageAllForms();
 initIMask();
 AOS.init();
@@ -98,7 +74,7 @@ $('.slick').slick({
     arrows: false,
     responsive: [
       {
-        breakpoint: 1150,
+        breakpoint: 1151,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -111,3 +87,42 @@ $('.slick').slick({
       // instead of a settings object
     ]
   });
+
+
+  function cardClicked(e) {
+
+    let target;
+
+    target = e.target;
+
+    while (target.className != "question") {
+        target = target.parentElement;
+    }
+
+    let answer = document.querySelector("#"+target.id+" .answer");
+
+    if (answer.style.display == "block") {
+        
+        target.style.border = "1px #DEB9F5 solid";
+        target.style.borderLeft = "13px #E13793 solid";
+        answer.style.display = "none";
+    }
+    else {
+
+        let questions = document.querySelectorAll(".SSS .container-1 .questions .question");
+        let answers = document.querySelectorAll(".SSS .container-1 .questions .question .answer");
+
+        for (let i = 0; i < questions.length; i++) {
+
+            answers[i].style.display = "none";
+            questions[i].style.border = "1px #DEB9F5 solid";
+            questions[i].style.borderLeft = "13px #E13793 solid";
+            
+        }
+
+        target.style.border = "3px #6639A6 solid";
+        target.style.borderLeft = "26px #824394 solid";
+        answer.style.display = "block";
+    }
+
+  }
