@@ -541,6 +541,10 @@ nav .container-1 .dropdown {
 
 @media (max-width:410px) {
 
+    .advantages-bg {
+        height: 500px;
+    }
+
     .advantages .slick .slick-item {
         padding: 19px 24px;
     }
@@ -616,7 +620,7 @@ nav .container-1 .dropdown {
     font-size: 14px;
 }
 
-.SSS button {
+.btn-type-1 {
     all: unset;
     font-size: 13px;
     font-weight: 500;
@@ -637,6 +641,10 @@ nav .container-1 .dropdown {
 
 @media (max-width:1150px) {
 
+    .SSS {
+        height: 750px;
+    }
+
     .SSS .container-1 img {
         display: none;
     }
@@ -649,6 +657,10 @@ nav .container-1 .dropdown {
 }
 
 @media (max-width:730px) {
+
+    .SSS {
+        height: 460px;
+    }
 
     .SSS .container-1 .questions {
         height: auto;
@@ -667,11 +679,192 @@ nav .container-1 .dropdown {
         font-size: 9px !important;
     }
 
-    .SSS button {
+    .btn-type-1 {
         margin-top: 0px;
-        width: 73px;
-        height: 24px;
-        font-size: 5px;
+        width: 70px;
+        height: 28px;
+        font-size: 6px;
+        padding: 0;
+    }
+
+}
+
+
+/* Blog */
+
+.blog {
+    height: 650px;
+}
+
+.blog h2 {
+    padding: 10px 0;
+}
+
+.blog .slick-2 {
+    display: grid;
+    grid-template-columns: 560px 560px;
+    grid-gap: 30px;
+    
+}
+
+.blog .slick-2 .box {
+    display: flex;
+    align-items: center;
+    
+    height: 196px;
+
+    box-shadow: 0px 5px 30px #DEB9F5;
+
+    border-left: 9px #E83794 solid;
+
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.blog .slick-2 .box .texts {
+    margin-left: 15px;
+}
+
+.blog .slick-2 .box .texts h5 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.blog .slick-2 .box .texts p {
+    font-size: 10px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.blog .slick-2 .box .texts button {
+
+    all: unset;
+
+    font-size: 9px;
+    font-weight: 300;
+
+    width: 112px;
+    height: 32px;
+
+    border-radius: 21px;
+
+    background-color: white;
+    color: #6639A6;
+    border: 1px #6639A6 solid;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.blog .slick-2 .box:hover {
+    border-left: 27px #6639A6 solid;
+    padding-left: 12px;
+    border-radius: 5px;
+}
+
+.blog .slick-2 .box:hover button {
+    border: none;
+    margin-top: 10px;
+    color: white;
+    background: linear-gradient(166deg, rgba(102,57,166,1) 0%, rgba(102,57,166,1) 10%, rgba(125,57,163,1) 18%, rgba(232,55,148,1) 100%);
+}
+
+
+
+.slick-dots li button:before {
+    color: transparent !important;
+    border: 2px #824394 solid !important;
+    border-radius: 20px;
+
+    font-size: 13px;
+    width: 23px !important;
+    height: 23px !important;
+    opacity: 1 !important;
+}
+
+.slick-dots li.slick-active button::before {
+
+    border: none !important;
+    background: rgb(102,57,166);
+    background: linear-gradient(166deg, rgba(102,57,166,1) 0%, rgba(102,57,166,1) 10%, rgba(125,57,163,1) 18%, rgba(232,55,148,1) 100%);
+
+}
+
+.blog .slick-dots {
+    top: 120%;
+}
+
+.slick-dots li {
+    margin: 0 7px !important;
+}
+
+@media (max-width:1250px){
+
+    .blog-bg {
+        height: 450px;
+    }
+
+    .blog {
+        height: 450px;
+    }
+
+    .blog .slick-2 {
+        display: block;
+        width: 100%;
+    }
+
+    .blog .slick-2 .box .texts p {
+        margin: 1% 0;
+    }
+
+}
+
+@media (max-width:780px) {
+
+    .blog-bg {
+        height: 300px;
+    }
+
+    .blog {
+        height: 300px;
+        margin-top: 50px;
+    }
+
+    .blog .slick-2 .box {
+        border-left-width: 3px;
+        width: 300px;
+        height: 105px;
+    }
+
+    .blog .btn-type-1 {
+        margin-top: 50px;
+    }
+
+    .blog .slick-2 .box:hover {
+        border-left-width: 10px;
+    }
+
+    .blog .slick-2 .box:hover button {
+        margin-top: 0 !important;
+    }
+
+    .blog .slick-2 .box img {
+        width: 133px;
+        height: 80px;
+    }
+
+    .blog .slick-2 .box .texts h5 {
+        font-size: 6px;
+    }
+
+    .blog .slick-2 .box .texts p {
+        font-weight: 400;
+        font-size: 4px;
+    }
+
+    .blog .slick-2 .box .texts button {
+        width: 60px;
+        height: 17px;
+        font-size: 4px;
     }
 
 }

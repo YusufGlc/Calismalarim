@@ -65,7 +65,19 @@ function filter(id, datas) {
 goStageAllForms();
 initIMask();
 AOS.init();
+$('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+  });
 
+  $('div[data-slide]').click(function(e) {
+    e.preventDefault();
+    var slideno = $(this).data('slide');
+    $('.slider-for').slick('slickGoTo', slideno - 1);
+
+  });
 
 $('.slick').slick({
     speed: 300,
@@ -82,11 +94,46 @@ $('.slick').slick({
           dots: true
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
+
     ]
   });
+
+//   if (document.body.clientWidth < 1250) {
+        
+//     $('.slick-2').slick({
+//         speed: 300,
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//         arrows: false,
+//         infinite: true,
+//         dots: true
+//     });
+
+// }
+
+//   window.onresize = function() {
+//     // if (document.body.clientWidth < 1250) {
+        
+//     //     $('.slick-2').slick({
+//     //         speed: 300,
+//     //         slidesToShow: 1,
+//     //         slidesToScroll: 1,
+//     //         arrows: false,
+//     //         infinite: true,
+//     //         dots: true
+//     //     });
+
+//     // }
+//     // else {
+
+//     //     $('.slick-2').slick('unslick')
+        
+//     // }
+//   };
+
+    
+
+  
 
 
   function cardClicked(e) {
