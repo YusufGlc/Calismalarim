@@ -66,10 +66,12 @@ goStageAllForms();
 initIMask();
 AOS.init();
 $('.slider-for').slick({
+    speed: 0,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     fade: true,
+    swipe: false
   });
 
   $('div[data-slide]').click(function(e) {
@@ -77,7 +79,7 @@ $('.slider-for').slick({
     var slideno = $(this).data('slide');
     $('.slider-for').slick('slickGoTo', slideno - 1);
 
-  });
+});
 
 $('.slick').slick({
     speed: 300,
@@ -96,47 +98,25 @@ $('.slick').slick({
       }
 
     ]
-  });
+});
 
-//   if (document.body.clientWidth < 1250) {
+if (document.body.clientWidth < 1250) {
         
-//     $('.slick-2').slick({
-//         speed: 300,
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         arrows: false,
-//         infinite: true,
-//         dots: true
-//     });
-
-// }
-
-//   window.onresize = function() {
-//     // if (document.body.clientWidth < 1250) {
-        
-//     //     $('.slick-2').slick({
-//     //         speed: 300,
-//     //         slidesToShow: 1,
-//     //         slidesToScroll: 1,
-//     //         arrows: false,
-//     //         infinite: true,
-//     //         dots: true
-//     //     });
-
-//     // }
-//     // else {
-
-//     //     $('.slick-2').slick('unslick')
-        
-//     // }
-//   };
-
-    
-
-  
+    $('.slick-2').slick({
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        infinite: true,
+        dots: true
+    }); 
+}
+else {
+    $('.slick-2').slick(unslick)
+}
 
 
-  function cardClicked(e) {
+function cardClicked(e) {
 
     let target;
 
@@ -171,5 +151,51 @@ $('.slick').slick({
         target.style.borderLeft = "26px #824394 solid";
         answer.style.display = "block";
     }
+}
 
-  }
+
+var Pressed = false;
+
+var deneme = 0;
+
+function mouseDown() {
+      
+    Pressed = true;
+}
+
+function mouseUp() {
+      
+    Pressed = false;
+
+}
+
+function mouseMove(e) {
+
+    if (Pressed && window.innerWidth <= 1150) {
+
+        let slick = document.querySelector(".Sigorta-Şirketleri .main-container")
+
+        let matrix = new WebKitCSSMatrix(getComputedStyle(slick).transform);
+        
+
+        if (deneme > e.clientX) {
+            matrix.e -= 1
+        }
+        else {
+            matrix.e -= -1
+        }
+
+        deneme = e.clientX
+
+        if (matrix.e < -slick.clientWidth + 300) {
+            matrix.e = -slick.clientWidth + 300;
+        }
+        else if (matrix.e > 200) {
+            matrix.e = 200
+        }
+
+        slick.setAttribute("style", "animation-duration: 0s; transform: " + matrix + ";")
+    
+    }
+
+}

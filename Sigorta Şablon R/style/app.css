@@ -659,7 +659,8 @@ nav .container-1 .dropdown {
 @media (max-width:730px) {
 
     .SSS {
-        height: 460px;
+        min-height: 460px;
+        height: auto;
     }
 
     .SSS .container-1 .questions {
@@ -677,6 +678,7 @@ nav .container-1 .dropdown {
 
     .SSS .container-1 .questions .answer p {
         font-size: 9px !important;
+        margin: 0px;
     }
 
     .btn-type-1 {
@@ -691,6 +693,10 @@ nav .container-1 .dropdown {
 
 
 /* Blog */
+
+.blog-bg {
+    height: 650px;
+}
 
 .blog {
     height: 650px;
@@ -810,6 +816,11 @@ nav .container-1 .dropdown {
     .blog .slick-2 {
         display: block;
         width: 100%;
+        box-shadow: 0px 5px 30px #DEB9F5;
+    }
+
+    .blog .slick-2 .box {
+        box-shadow: none;
     }
 
     .blog .slick-2 .box .texts p {
@@ -867,4 +878,113 @@ nav .container-1 .dropdown {
         font-size: 4px;
     }
 
+}
+
+
+/* Sigorta Şirketleri */
+
+.Sigorta-Şirketleri {
+    height: 1000px;
+}
+
+.Sigorta-Şirketleri .main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.Sigorta-Şirketleri .main-container .containers {
+    display: flex;
+    justify-content: center;
+}
+
+.Sigorta-Şirketleri .main-container .containers .container-item {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    box-shadow: 0px 5px 20px rgb(20, 47, 67, .2);
+    border-radius: 100%;
+
+    margin-right: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */                            
+}
+
+
+@media (max-width:1150px) {
+
+    .Sigorta-Şirketleri {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .Sigorta-Şirketleri .main-container {
+        flex-direction: row;
+        justify-content: space-between;
+
+        transform: translateX(0);
+
+        width: fit-content;
+
+        animation-name: SliderAnim;
+        animation-duration: 50s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        
+    }
+
+}
+
+@media (max-width:380px) {
+
+    .Sigorta-Şirketleri .main-container {
+
+        transform: translateX(0);
+        animation-name: SliderAnim2;
+    }
+
+    .Sigorta-Şirketleri .main-container .containers .container-item  {
+
+        width: 45.59px;
+        height: 45.59px;
+
+        margin-right: 37px;
+        
+    }
+
+    .Sigorta-Şirketleri .main-container .containers .container-item img {
+
+        width: 80%;
+
+    }
+
+}
+
+
+@keyframes SliderAnim {
+    0% {transform: translateX(0);}
+
+    50% {transform: translateX(-2200px);}
+
+    100% {transform: translateX(0);}
+}
+
+@keyframes SliderAnim2 {
+    0% {transform: translateX(0);}
+
+    50% {transform: translateX(-2200px);}
+
+    100% {transform: translateX(0);}
 }
