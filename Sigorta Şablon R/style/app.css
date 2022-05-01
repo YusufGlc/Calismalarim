@@ -676,9 +676,14 @@ nav .container-1 .dropdown {
         text-align: center;
     }
 
+    .SSS .container-1 .questions .answer {
+        max-height: 100% !important;
+    }
+
     .SSS .container-1 .questions .answer p {
         font-size: 9px !important;
         margin: 0px;
+
     }
 
     .btn-type-1 {
@@ -884,7 +889,7 @@ nav .container-1 .dropdown {
 /* Sigorta Şirketleri */
 
 .Sigorta-Şirketleri {
-    height: 1000px;
+    height: 650px;
 }
 
 .Sigorta-Şirketleri .main-container {
@@ -927,6 +932,7 @@ nav .container-1 .dropdown {
 
     .Sigorta-Şirketleri {
         max-width: 100%;
+        height: 300px;
         overflow: hidden;
     }
 
@@ -942,17 +948,23 @@ nav .container-1 .dropdown {
         animation-duration: 50s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
+        height: fit-content;
         
     }
 
 }
 
-@media (max-width:380px) {
+@media (max-width:500px) {
+
+    .Sigorta-Şirketleri {
+        height: 200px;
+    }
 
     .Sigorta-Şirketleri .main-container {
 
         transform: translateX(0);
         animation-name: SliderAnim2;
+        animation-duration: 30s;
     }
 
     .Sigorta-Şirketleri .main-container .containers .container-item  {
@@ -984,7 +996,7 @@ nav .container-1 .dropdown {
 @keyframes SliderAnim2 {
     0% {transform: translateX(0);}
 
-    50% {transform: translateX(-2200px);}
+    50% {transform: translateX(-800px);}
 
     100% {transform: translateX(0);}
 }
