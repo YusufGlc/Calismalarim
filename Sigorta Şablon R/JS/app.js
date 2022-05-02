@@ -100,7 +100,7 @@ $('.slick').slick({
     ]
 });
 
-if (document.body.clientWidth < 1250) {
+if (document.body.clientWidth <= 1250) {
         
     $('.slick-2').slick({
         speed: 300,
@@ -111,9 +111,7 @@ if (document.body.clientWidth < 1250) {
         dots: true
     }); 
 }
-else {
-    $('.slick-2').slick(unslick)
-}
+
 
 
 function cardClicked(e) {
@@ -200,27 +198,31 @@ function mouseMove(e) {
 }
 
 function touchMove(e) {
+
+    if (window.innerWidth <= 1150) {
+
+        let slick = document.querySelector(".Sigorta-Şirketleri .main-container")
+
+        let matrix = new WebKitCSSMatrix(getComputedStyle(slick).transform);
+
+        if (deneme > e.changedTouches[0].clientX) {
+            matrix.e -= 2
+        }
+        else {
+            matrix.e -= -2
+        }
+
+        deneme = e.changedTouches[0].clientX
+
+        if (matrix.e < -slick.clientWidth + 300) {
+            matrix.e = -slick.clientWidth + 300;
+        }
+        else if (matrix.e > 200) {
+            matrix.e = 200
+        }
+
+        slick.setAttribute("style", "animation-duration: 0s; transform: " + matrix + ";")
+
+    }
     
-    let slick = document.querySelector(".Sigorta-Şirketleri .main-container")
-
-    let matrix = new WebKitCSSMatrix(getComputedStyle(slick).transform);
-
-    if (deneme > e.changedTouches[0].clientX) {
-        matrix.e -= 2
-    }
-    else {
-        matrix.e -= -2
-    }
-
-    deneme = e.changedTouches[0].clientX
-
-    if (matrix.e < -slick.clientWidth + 300) {
-        matrix.e = -slick.clientWidth + 300;
-    }
-    else if (matrix.e > 200) {
-        matrix.e = 200
-    }
-
-    slick.setAttribute("style", "animation-duration: 0s; transform: " + matrix + ";")
-
 }

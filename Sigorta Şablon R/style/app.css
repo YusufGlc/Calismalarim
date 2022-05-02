@@ -128,6 +128,7 @@ nav .container-1 .dropdown {
 
     .align-center {
         padding: 0;
+        max-width: 80%;
     }
 
     .backGround-2 {
@@ -144,10 +145,6 @@ nav .container-1 .dropdown {
 
     nav .container-1 .dropdown {
         display: block;
-    }
-
-    .align-center {
-        max-width: 80%;
     }
 
 }
@@ -999,4 +996,116 @@ nav .container-1 .dropdown {
     50% {transform: translateX(-800px);}
 
     100% {transform: translateX(0);}
+}
+
+
+/* Footer*/
+
+.footer .E-bülten {
+    width: 100%;
+    background-color: #290931;
+}
+
+.footer .E-bülten .container-1 {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 33px 0;
+}
+
+.footer .E-bülten .container-1 .texts h5 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.footer .E-bülten .container-1 .texts p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.footer .E-bülten .container-1 form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.footer .E-bülten .container-1 form input {
+    border: none;
+    height: 100%;
+    background-color: transparent;
+    border: 2px white solid;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    outline: none;
+    color: white;
+    padding: 10px;
+    width: 388px;
+}
+
+.footer .E-bülten .container-1 form input::placeholder {
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.footer .E-bülten .container-1 form button {
+    all: unset;
+    background-color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 96px;
+    height: 100%;
+    color: #290931;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+}
+
+@media (max-width:1300px) {
+
+    .footer .E-bülten .container-1 {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 80%;
+    }
+
+    .footer .E-bülten .container-1 form {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width:580px) {
+
+    .footer .E-bülten .container-1 .texts h5 {
+        font-size: 10px
+    }
+
+    .footer .E-bülten .container-1 .texts p {
+        font-size: 9px;
+    }
+
+    .footer .E-bülten .container-1 form {
+        height: 30px;
+        width: 100%;
+    }
+
+    .footer .E-bülten .container-1 form input {
+        width: 70%;
+        font-size: 10px;
+    }
+
+    .footer .E-bülten .container-1 form button {
+        
+        font-size: 10px;
+    }
+
+    .footer .E-bülten .container-1 form input::placeholder {
+        font-size: 10px;
+    }
+
+
+
 }
