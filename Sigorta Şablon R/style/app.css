@@ -1015,6 +1015,10 @@ nav .container-1 .dropdown {
     padding: 33px 0;
 }
 
+.footer .E-bülten .container-1 .texts  {
+    max-width: 500px;
+}
+
 .footer .E-bülten .container-1 .texts h5 {
     font-size: 25px;
     font-weight: 700;
@@ -1042,7 +1046,7 @@ nav .container-1 .dropdown {
     outline: none;
     color: white;
     padding: 10px;
-    width: 388px;
+    width: 359px;
 }
 
 .footer .E-bülten .container-1 form input::placeholder {
