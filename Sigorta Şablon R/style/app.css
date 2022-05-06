@@ -1001,6 +1001,8 @@ nav .container-1 .dropdown {
 
 /* Footer*/
 
+/* E-bülten */
+
 .footer .E-bülten {
     width: 100%;
     background-color: #290931;
@@ -1110,6 +1112,63 @@ nav .container-1 .dropdown {
         font-size: 10px;
     }
 
-
-
 }
+
+/* footer-center */
+
+.footer .footer-center {
+    background-color: #360941;
+    padding: 33px 0;
+}
+
+.footer .footer-center ul {
+    list-style-type: none;
+}
+
+.footer .footer-center li h5 {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.footer .footer-center a {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer .footer-center a , .footer .footer-center i {
+    color: white;
+    opacity: .6;
+    text-decoration: none;
+}
+
+.footer .footer-center a:hover , .footer .footer-center i:hover {
+    opacity: 1;
+}
+
+.footer .footer-center .container-1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.footer .footer-center .container-1 .map-and-icons .icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+
+.footer .footer-center .container-1 .map-and-icons .icons i {
+    font-size: 20px;
+}
+
+.footer .footer-center .container-1 .iletişim-Bilgileri {
+    width: 190px;
+    line-height: 15px;
+}
+
+.footer .footer-center .container-1 .iletişim-Bilgileri a {
+    font-size: 13px;
+}
+
