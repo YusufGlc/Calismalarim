@@ -65,6 +65,7 @@ function filter(id, datas) {
 goStageAllForms();
 initIMask();
 AOS.init();
+
 $('.slider-for').slick({
     speed: 0,
     slidesToShow: 1,
@@ -153,11 +154,13 @@ function cardClicked(e) {
 
 
 var Pressed = false;
+var animationReady = false
+var x
 
 var deneme = 0;
 
-function mouseDown() {
-      
+function mouseDown(e) {
+    
     Pressed = true;
 }
 
@@ -165,25 +168,25 @@ function mouseUp() {
       
     Pressed = false;
 
+    setTimeout(function() {
+
+        let slick = document.querySelector(".Sigorta-Şirketleri .main-container")
+
+        slick.style=null
+
+    },5000)
+
 }
 
 function mouseMove(e) {
 
     if (Pressed && window.innerWidth <= 1150) {
-
+        
         let slick = document.querySelector(".Sigorta-Şirketleri .main-container")
 
         let matrix = new WebKitCSSMatrix(getComputedStyle(slick).transform);
-        
 
-        if (deneme > e.clientX) {
-            matrix.e -= 1
-        }
-        else {
-            matrix.e -= -1
-        }
-
-        deneme = e.clientX
+        matrix.e += e.movementX;
 
         if (matrix.e < -slick.clientWidth + 300) {
             matrix.e = -slick.clientWidth + 300;
@@ -201,15 +204,17 @@ function touchMove(e) {
 
     if (window.innerWidth <= 1150) {
 
+        console.log(e)
+
         let slick = document.querySelector(".Sigorta-Şirketleri .main-container")
 
         let matrix = new WebKitCSSMatrix(getComputedStyle(slick).transform);
 
         if (deneme > e.changedTouches[0].clientX) {
-            matrix.e -= 2
+            matrix.e -= 3
         }
-        else {
-            matrix.e -= -2
+        else if (deneme < e.changedTouches[0].clientX) {
+            matrix.e -= -3
         }
 
         deneme = e.changedTouches[0].clientX
@@ -225,4 +230,31 @@ function touchMove(e) {
 
     }
     
+}
+
+
+function MenuClick() {
+    
+    let menuContainer = document.querySelector("nav .menu-container");
+
+    if (menuContainer.style.display == "flex") {
+        menuContainer.style.display = "none";
+    }
+    else {
+        menuContainer.style.display = "flex";
+    }
+
+}
+
+
+function DropdownClick() {
+    
+    let dropdownContainer = document.querySelector("nav .menu-container .dropdown-1 .dropdown-container")
+
+    if (dropdownContainer.style.display == "flex") {
+        dropdownContainer.style.display = "none";
+    }
+    else {
+        dropdownContainer.style.display = "flex";
+    }
 }

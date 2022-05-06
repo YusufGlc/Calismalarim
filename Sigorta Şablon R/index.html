@@ -42,7 +42,18 @@
             <div class="container-2">
 
                 <a href="">Hakkımızda</a>
-                <a href="">Ürünlerimiz<i class="fa-solid fa-angle-down"></i></a>
+                <span class="dropdown-1">Ürünlerimiz<i class="fa-solid fa-angle-down"></i>
+                
+                    <div class="dropdown-container">
+
+                        <a href="">Lorem, ipsum.</a>
+                        <a href="">Lorem, ipsum.</a>
+                        <a href="">Lorem, ipsum.</a>
+
+                    </div>
+
+                </span>
+
                 <a href="">S.S.S</a>
                 <a href="">Blog</a>
                 <a href="">İletişim</a>
@@ -51,7 +62,32 @@
 
             </div>
 
-            <img src="./img/Icon open-menu.png" class="dropdown">
+            <div class="menu" onclick="MenuClick()">
+                <div class="lines line-1"></div>
+                <div class="lines line-2"></div>
+                <div class="lines line-3"></div>
+            </div>
+
+
+        </div>
+
+        <div class="menu-container">
+
+            <a href="">Hakkımızda</a>
+            <span class="dropdown-1" onclick="DropdownClick()">Ürünlerimiz<i class="fa-solid fa-angle-down"></i>
+                
+                <div class="dropdown-container">
+
+                    <a href="">Lorem, ipsum.</a>
+                    <a href="">Lorem, ipsum.</a>
+                    <a href="">Lorem, ipsum.</a>
+
+                </div>
+
+            </span>
+            <a href="">S.S.S</a>
+            <a href="">Blog</a>
+            <a href="">İletişim</a>
 
         </div>
 
@@ -432,7 +468,7 @@
         <h2 class="header-type-1">Anlaşmalı Sigorta Şirketleri</h2>
 
 
-        <div class="main-container noselect" draggable="false" ontouchmove="touchMove(event)" onmousedown="mouseDown()" onmouseup="mouseUp()" onmousemove="mouseMove(event)" >
+        <div class="main-container noselect" draggable="false" ontouchmove="touchMove(event)" onmousedown="mouseDown(event)" onmouseup="mouseUp()" onmousemove="mouseMove(event)" >
 
 
             <div class="containers container-1" draggable="false">
@@ -534,7 +570,7 @@
 
             <div class="container-1 align-center"> 
 
-                <ul>
+                <ul class="border-1">
                     <li><h5>Biz Kimiz?</h5></li>
 
                     <li><a href="">Hakkımızda</a></li>
@@ -543,7 +579,7 @@
                     <li><a href="">S.S.S</a></li>
                 </ul>
 
-                <ul>
+                <ul class="border-1">
                     <li><h5>Ürünlerimiz</h5></li>
 
                     <li><a href="">Trafik Sigortası</a></li>
@@ -566,10 +602,10 @@
                     <img src="./img/infowindow.png" class="map" alt="map">
 
                     <div class="icons">
-                        <i class="fa-brands fa-facebook-f"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-linkedin-in"></i>
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a> 
+                        <a href=""><i class="fa-brands fa-instagram"></i></a> 
+                        <a href=""><i class="fa-brands fa-twitter"></i></a> 
+                        <a href=""><i class="fa-brands fa-linkedin-in"></i></a> 
                     </div>
 
                 </div>
@@ -578,9 +614,9 @@
 
                     <li><h5>İletişim Bilgileri</h5></li>
 
-                    <li><i class="fa-solid fa-envelope"></i> <a href="">acerpro@acerpro.com</a></li>
-                    <li><a href="">+90 553 187 88 55</a></li>
-                    <li><a href="">180 sk. Ayazağa mah. Sarıyer/İstanbul</a></li>
+                    <li><i class="fa-solid fa-envelope"></i> <a href="mailto: acerpro@acerpro.com">acerpro@acerpro.com</a></li>
+                    <li><i class="fa-solid fa-phone"></i> <a href="Tel: +905531878855">+90 553 187 88 55</a></li>
+                    <li><i class="fa-solid fa-envelope"></i> <a href="https://goo.gl/maps/ZQJJtVVUbWcGfbzz8" target="blank">180 sk. Ayazağa mah. Sarıyer/İstanbul</a></li>
 
                 </ul>
                 
@@ -590,6 +626,12 @@
             </div>
 
 
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>Powered by DigiMondi Designed by BacTERRY</p>
 
         </div>
 
