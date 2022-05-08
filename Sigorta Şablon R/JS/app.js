@@ -154,10 +154,9 @@ function cardClicked(e) {
 
 
 var Pressed = false;
-var animationReady = false
-var x
+var animationReady = true;
 
-var deneme = 0;
+var oldX = 0;
 
 function mouseDown(e) {
     
@@ -168,13 +167,25 @@ function mouseUp() {
       
     Pressed = false;
 
+    if (animationReady == false) {
+        return;
+    }
+
     setTimeout(function() {
 
-        let slick = document.querySelector(".Sigorta-Şirketleri .main-container")
+        if (Pressed == false) {
 
-        slick.style=null
+            let slick = document.querySelector(".Sigorta-Şirketleri .main-container");
 
-    },5000)
+            slick.style=null;
+
+        }
+
+        animationReady = true;
+
+    },10000);
+
+    animationReady = false;
 
 }
 
@@ -204,20 +215,18 @@ function touchMove(e) {
 
     if (window.innerWidth <= 1150) {
 
-        console.log(e)
-
         let slick = document.querySelector(".Sigorta-Şirketleri .main-container")
 
         let matrix = new WebKitCSSMatrix(getComputedStyle(slick).transform);
 
-        if (deneme > e.changedTouches[0].clientX) {
+        if (oldX > e.changedTouches[0].clientX) {
             matrix.e -= 3
         }
-        else if (deneme < e.changedTouches[0].clientX) {
+        else if (oldX < e.changedTouches[0].clientX) {
             matrix.e -= -3
         }
 
-        deneme = e.changedTouches[0].clientX
+        oldX = e.changedTouches[0].clientX
 
         if (matrix.e < -slick.clientWidth + 300) {
             matrix.e = -slick.clientWidth + 300;
@@ -235,26 +244,19 @@ function touchMove(e) {
 
 function MenuClick() {
     
+    let nav = document.querySelector("nav");
+    let container = document.querySelector("nav .container-1");
     let menuContainer = document.querySelector("nav .menu-container");
 
-    if (menuContainer.style.display == "flex") {
-        menuContainer.style.display = "none";
+    if (getComputedStyle(menuContainer).display == "flex") {
+        nav.className = nav.className.replace(" menuOpened","");
+        container.className = container.className.replace(" menuOpened","");
+        menuContainer.className = menuContainer.className.replace(" menuOpened","");
     }
     else {
-        menuContainer.style.display = "flex";
+        nav.className += " menuOpened";
+        container.className += " menuOpened";
+        menuContainer.className += " menuOpened";
     }
 
-}
-
-
-function DropdownClick() {
-    
-    let dropdownContainer = document.querySelector("nav .menu-container .dropdown-1 .dropdown-container")
-
-    if (dropdownContainer.style.display == "flex") {
-        dropdownContainer.style.display = "none";
-    }
-    else {
-        dropdownContainer.style.display = "flex";
-    }
 }
