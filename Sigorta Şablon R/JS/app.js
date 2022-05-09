@@ -73,9 +73,9 @@ $('.slider-for').slick({
     arrows: false,
     fade: true,
     swipe: false
-  });
+});
 
-  $('div[data-slide]').click(function(e) {
+$('div[data-slide]').click(function(e) {
     e.preventDefault();
     var slideno = $(this).data('slide');
     $('.slider-for').slick('slickGoTo', slideno - 1);
@@ -117,21 +117,18 @@ if (document.body.clientWidth <= 1250) {
 
 function cardClicked(e) {
 
-    let target;
+    let question = e.target;
 
-    target = e.target;
-
-    while (target.className != "question") {
-        target = target.parentElement;
+    while (question.classList.contains("question") == false) {
+        question = question.parentElement;
     }
 
-    let answer = document.querySelector("#"+target.id+" .answer");
-
-    if (answer.style.display == "block") {
+    let answer = document.querySelector("#"+question.id+" .answer");
+    
+    if (getComputedStyle(answer).display == "block") {
         
-        target.style.border = "1px #DEB9F5 solid";
-        target.style.borderLeft = "13px #E13793 solid";
-        answer.style.display = "none";
+        answer.classList.remove("show");
+        question.classList.remove("answerShowed");
     }
     else {
 
@@ -140,15 +137,14 @@ function cardClicked(e) {
 
         for (let i = 0; i < questions.length; i++) {
 
-            answers[i].style.display = "none";
-            questions[i].style.border = "1px #DEB9F5 solid";
-            questions[i].style.borderLeft = "13px #E13793 solid";
+            answers[i].classList.remove("show");
+            questions[i].classList.remove("answerShowed");
             
         }
 
-        target.style.border = "3px #6639A6 solid";
-        target.style.borderLeft = "26px #824394 solid";
-        answer.style.display = "block";
+        answer.classList.add("show");
+        question.classList.add("answerShowed");
+        
     }
 }
 
@@ -158,7 +154,7 @@ var animationReady = true;
 
 var oldX = 0;
 
-function mouseDown(e) {
+function mouseDown() {
     
     Pressed = true;
 }
@@ -241,22 +237,153 @@ function touchMove(e) {
     
 }
 
+let menuReadyToClick = true;
 
 function MenuClick() {
+
+    if (!menuReadyToClick) {
+        return;
+    }
     
+    menuReadyToClick = false;
+
     let nav = document.querySelector("nav");
-    let container = document.querySelector("nav .container-1");
+
     let menuContainer = document.querySelector("nav .menu-container");
 
-    if (getComputedStyle(menuContainer).display == "flex") {
-        nav.className = nav.className.replace(" menuOpened","");
-        container.className = container.className.replace(" menuOpened","");
-        menuContainer.className = menuContainer.className.replace(" menuOpened","");
+    if (nav.classList.contains("menuOpened")) {
+
+        menuContainer.animate(
+            [
+                {height: getComputedStyle(menuContainer).height },
+                {height: "50px"}
+            ],
+            {duration: 500, iterations: 1}
+        )
+
+        setTimeout(function() {
+            nav.classList.remove("menuOpened");
+            menuReadyToClick = true;
+        },490)
+
     }
     else {
-        nav.className += " menuOpened";
-        container.className += " menuOpened";
-        menuContainer.className += " menuOpened";
+
+        nav.classList.add("menuOpened");
+
+        menuContainer.animate(
+            [
+                {height: "50px" },
+                {height: getComputedStyle(menuContainer).height }
+            ],
+            {duration: 500, iterations: 1}
+        )
+
+        setTimeout(function() {
+            menuReadyToClick = true;
+        },490)
+
+    }
+
+}
+
+let dropdownReadyToClick = true;
+
+function DropdownClick() {
+    
+    if (!dropdownReadyToClick) {
+        return;
+    }
+
+    dropdownReadyToClick = false;
+
+    let dropdown = document.querySelector("nav .menu-container .dropdown-1 .dropdown-container");
+
+    let arrowİcon = document.querySelector("nav .menu-container span i");
+
+    if (getComputedStyle(dropdown).display == "flex") {
+
+        dropdown.animate(
+            [
+                {height: getComputedStyle(dropdown).height },
+                {height: "0px"}
+            ],
+            {duration: 500, iterations: 1}
+        )
+
+        setTimeout(function() {
+            dropdown.style.display = null;
+            dropdownReadyToClick = true;
+        },480)
+
+        arrowİcon.animate(
+            [
+                {transform: "rotateZ(90deg)"},
+                {transform: "rotateZ(0deg)"}
+            ],
+            {duration: 200,iterations: 1}
+        )
+
+        setTimeout(function() {
+            arrowİcon.style.transform = null;
+        },150)
+    }
+    else {
+
+        dropdown.style.display = "flex";
+
+        dropdown.animate(
+            [
+                {height: "0px" },
+                {height: getComputedStyle(dropdown).height }
+            ],
+            {duration: 500,iterations: 1}
+        )
+
+        setTimeout(function() {
+            dropdownReadyToClick = true;
+        },480)
+
+        arrowİcon.animate(
+            [
+                {transform: "rotateZ(0deg)"},
+                {transform: "rotateZ(90deg)"}
+            ],
+            {duration: 200, iterations: 1}
+        )
+
+        setTimeout(function() {
+            arrowİcon.style.transform = "rotateZ(90deg)";
+        },150)    }
+
+}
+
+window.onresize = function() {
+
+    if (window.innerWidth >= 1150 && document.querySelector("nav").classList.contains("menuOpened"))
+    document.querySelector("nav").classList.remove("menuOpened");
+    
+
+    try {
+        
+        if (document.body.clientWidth <= 1250) {
+
+            $('.slick-2').slick({
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                infinite: true,
+                dots: true
+            }); 
+            
+        }
+        else {
+            $('.slick-2').slick('unslick');
+        }
+
+    } catch (error) {
+        
     }
 
 }

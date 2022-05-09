@@ -138,6 +138,7 @@ nav .menu .lines {
     margin-bottom: 10px;
 }
 
+
 nav .menu-container {
     display: none;
     flex-direction: column;
@@ -145,7 +146,7 @@ nav .menu-container {
     position: absolute;
     z-index: 10;
     height: 100vh;
-    background-color: rgb(190, 0, 159);
+    background-image: linear-gradient(to bottom, rgb(212, 39, 183),rgb(110, 20, 95));
     padding-bottom: 30px;
 }
 
@@ -157,8 +158,12 @@ nav .menu-container a, nav .menu-container span {
     width: 100%;
     padding: 20px 0;
     padding-left: 10%;
-    border-top: 1px solid rgb(71, 70, 70);
+    border-top: 2px solid rgb(0, 0, 0,.3);
     cursor: pointer;
+}
+
+nav .menu-container span i {
+    margin-left: 10px;
 }
 
 nav.menuOpened {
@@ -167,21 +172,23 @@ nav.menuOpened {
     position: fixed;
     z-index: 10;
     top: 0;
-    background-color: rgb(190, 0, 159);
+    background-color: rgb(212, 39, 183);
 }
 
-nav .container-1.menuOpened {
+nav.menuOpened .container-1 {
     max-width: 80%;
     padding: 20px 0;
 }
 
-nav .menu-container.menuOpened {
+nav.menuOpened .menu-container {
     display: flex;
+    overflow: hidden;
 }
 
 nav .menu-container .dropdown-1 .dropdown-container {
     display: none;
     flex-direction: column;
+    overflow: hidden;
 }
 
 nav .menu-container .dropdown-1 .dropdown-container a {
@@ -678,8 +685,19 @@ nav .container-1 .dropdown-1:hover .dropdown-container {
     color: #413E3E;
 }
 
+.SSS .container-1 .questions .question.answerShowed {
+    border: 3px #6639A6 solid;
+    border-left: 26px #824394 solid !important;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
 .SSS .container-1 .questions .question .answer {
     display: none;
+}
+
+.SSS .container-1 .questions .question .answer.show {
+    display: block;
 }
 
 .SSS .container-1 .questions .question .answer p {
