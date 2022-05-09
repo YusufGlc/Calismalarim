@@ -203,6 +203,13 @@ nav .container-1 .dropdown-1 .dropdown-container {
     flex-direction: column;
     position: absolute;
     height: auto;
+    background-color: rgb(102, 57, 166);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+nav .container-1 .dropdown-1 .dropdown-container a {
+    text-align: left;
 }
 
 nav .container-1 .dropdown-1:hover .dropdown-container {
@@ -1139,6 +1146,7 @@ nav .container-1 .dropdown-1:hover .dropdown-container {
     color: white;
     font-size: 15px;
     font-weight: 300;
+    padding-left: 1px;
 }
 
 .footer .E-bülten .container-1 form button {
