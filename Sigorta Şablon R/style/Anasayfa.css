@@ -85,7 +85,7 @@ nav .container-1 .container-2 a i {
 }
 
 nav .container-1 .container-2 .border-box {
-    border: 1px white solid;
+    border: 2px white solid;
     height: fit-content;
     padding: 3px 8px;
     border-radius: 10px;
@@ -1070,6 +1070,12 @@ nav .container-1 .dropdown-1:hover .dropdown-container {
 
     }
 
+}
+
+@media (min-width:1150px) {
+    .Sigorta-Şirketleri .main-container {
+        transform: unset !important;
+    }
 }
 
 
