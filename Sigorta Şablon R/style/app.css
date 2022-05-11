@@ -51,6 +51,7 @@ nav .container-1 {
     max-width: 1180px;
     padding: 20px 0;
     align-items: center;
+    position: relative;
 }
 
 nav .nav-header {

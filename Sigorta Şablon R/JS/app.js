@@ -152,8 +152,6 @@ function cardClicked(e) {
 var Pressed = false;
 var animationReady = true;
 
-var oldX = 0;
-
 function mouseDown() {
     
     Pressed = true;
@@ -207,19 +205,28 @@ function mouseMove(e) {
 
 }
 
+
+let oldX = 0;
+
+function touchStart(e) {
+    oldX = e.touches[0].pageX
+}
+
 function touchMove(e) {
 
     if (window.innerWidth <= 1150) {
+        e.preventDefault();
+        console.log(e.touches[0].pageX)
 
         let slick = document.querySelector(".Sigorta-Şirketleri .main-container")
 
         let matrix = new WebKitCSSMatrix(getComputedStyle(slick).transform);
 
         if (oldX > e.changedTouches[0].clientX) {
-            matrix.e -= 3
+            matrix.e -= oldX - e.changedTouches[0].clientX
         }
         else if (oldX < e.changedTouches[0].clientX) {
-            matrix.e -= -3
+            matrix.e -= oldX - e.changedTouches[0].clientX
         }
 
         oldX = e.changedTouches[0].clientX
@@ -227,15 +234,18 @@ function touchMove(e) {
         if (matrix.e < -slick.clientWidth + 300) {
             matrix.e = -slick.clientWidth + 300;
         }
-        else if (matrix.e > 200) {
-            matrix.e = 200
+        else if (matrix.e > 20) {
+            matrix.e = 20
         }
 
         slick.setAttribute("style", "animation-duration: 0s; transform: " + matrix + ";")
 
+
     }
     
 }
+
+
 
 let menuReadyToClick = true;
 
@@ -246,6 +256,8 @@ function MenuClick() {
     }
     
     menuReadyToClick = false;
+
+    document.body.style.overflow = null;
 
     let nav = document.querySelector("nav");
 
@@ -260,14 +272,15 @@ function MenuClick() {
             ],
             {duration: 500, iterations: 1}
         )
-
-        setTimeout(function() {
+        .onfinish = function() {
             nav.classList.remove("menuOpened");
             menuReadyToClick = true;
-        },490)
+        };
 
     }
     else {
+
+        document.body.style.overflow = "hidden";
 
         nav.classList.add("menuOpened");
 
@@ -278,10 +291,9 @@ function MenuClick() {
             ],
             {duration: 500, iterations: 1}
         )
-
-        setTimeout(function() {
+        .onfinish = function() {
             menuReadyToClick = true;
-        },490)
+        };
 
     }
 
@@ -289,7 +301,7 @@ function MenuClick() {
 
 let dropdownReadyToClick = true;
 
-function DropdownClick() {
+function MenuDropdownClick() {
     
     if (!dropdownReadyToClick) {
         return;
@@ -310,11 +322,11 @@ function DropdownClick() {
             ],
             {duration: 500, iterations: 1}
         )
-
-        setTimeout(function() {
+        .onfinish = function() {
+            
             dropdown.style.display = null;
             dropdownReadyToClick = true;
-        },480)
+        };
 
         arrowİcon.animate(
             [
@@ -323,10 +335,9 @@ function DropdownClick() {
             ],
             {duration: 200,iterations: 1}
         )
-
-        setTimeout(function() {
+        .onfinish = function() {
             arrowİcon.style.transform = null;
-        },150)
+        };
     }
     else {
 
@@ -339,10 +350,9 @@ function DropdownClick() {
             ],
             {duration: 500,iterations: 1}
         )
-
-        setTimeout(function() {
+        .onfinish = function() {
             dropdownReadyToClick = true;
-        },480)
+        };
 
         arrowİcon.animate(
             [
@@ -351,10 +361,10 @@ function DropdownClick() {
             ],
             {duration: 200, iterations: 1}
         )
-
-        setTimeout(function() {
+        .onfinish = function() {
             arrowİcon.style.transform = "rotateZ(90deg)";
-        },150)    }
+        };
+    }
 
 }
 
