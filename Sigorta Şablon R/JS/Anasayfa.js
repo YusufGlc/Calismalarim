@@ -44,7 +44,7 @@ if (document.body.clientWidth <= 1250) {
         infinite: true,
         dots: true
     }); 
-}
+};
 
 
 
@@ -79,16 +79,16 @@ function cardClicked(e) {
         question.classList.add("answerShowed");
         
     }
-}
+};
 
 
-var Pressed = false;
-var animationReady = true;
+let Pressed = false;
+let animationReady = true;
 
 function mouseDown() {
     
     Pressed = true;
-}
+};
 
 function mouseUp() {
       
@@ -114,7 +114,7 @@ function mouseUp() {
 
     animationReady = false;
 
-}
+};
 
 function mouseMove(e) {
 
@@ -136,14 +136,14 @@ function mouseMove(e) {
         slick.setAttribute("style", "animation-duration: 0s; transform: " + matrix + ";")
     }
 
-}
+};
 
 
 let oldX = 0;
 
 function touchStart(e) {
-    oldX = e.touches[0].pageX
-}
+    oldX = e.touches[0].pageX;
+};
 
 function touchMove(e) {
 
@@ -176,7 +176,7 @@ function touchMove(e) {
 
     }
     
-}
+};
 
 
 
@@ -230,7 +230,7 @@ function MenuClick() {
 
     }
 
-}
+};
 
 let dropdownReadyToClick = true;
 
@@ -299,13 +299,19 @@ function MenuDropdownClick() {
         };
     }
 
-}
+};
 
 window.onresize = function() {
 
     if (window.innerWidth >= 1150 && document.querySelector("nav").classList.contains("menuOpened"))
     document.querySelector("nav").classList.remove("menuOpened");
-    
+    else if (window.innerWidth <= 500) {
+        
+        let slick = document.querySelector(".Sigorta-Şirketleri .main-container")
+
+        slick.style.transform = "translateX(0px)";
+
+    };
 
     try {
         
@@ -329,7 +335,7 @@ window.onresize = function() {
         
     }
 
-}
+};
 
 
 AOS.init();
