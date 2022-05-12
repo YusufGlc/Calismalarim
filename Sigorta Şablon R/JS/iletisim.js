@@ -238,4 +238,37 @@ window.onresize = function() {
 }
 
 
+function FormSubmited(e) {
+
+    let texts = document.querySelectorAll(".form-box input, .form-box textarea") 
+
+
+    for (const iterator of texts) {
+
+        console.log(iterator.value.split(" ").join(""))
+
+        if (iterator.value.split(" ").join("") == "") {
+
+            iterator.classList.add("hasError")
+            document.querySelector("."+iterator.id+"-box .hata").classList.add("show");
+
+            iterator.value = "";
+
+            e.preventDefault();
+
+        }
+        
+
+    }
+
+}
+
+function closeThisError(e) {
+    
+    e.target.classList.remove("hasError")
+    document.querySelector("."+e.target.id+"-box .hata").classList.remove("show");
+
+}
+
+
 AOS.init();

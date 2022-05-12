@@ -109,15 +109,34 @@
 
             <h4>İletişime Geç <span class="line"></span> </h4>
 
-            <form autocomplete="off">
+            <form autocomplete="off" onsubmit="FormSubmited(event)">
 
+                <div class="ad-box">
+                    <input type="text" placeholder="Adınız:" id="ad" onfocus="closeThisError(event)">
+                    <span class="hata">Bu alan boş geçilemez</span>
+                </div>
 
-                <input type="text" placeholder="Adınız:" id="ad">
-                <input type="text" placeholder="E-Mail:" id="mail">
-                <input type="text" placeholder="Soyadınız:" id="soyad">
-                <input type="text" placeholder="Telefon:" id="tel">
-                <textarea placeholder="Mesajınız:" id="mesaj"></textarea>
-                <button type="button">Gönder</button>
+                <div class="mail-box">
+                    <input type="text" placeholder="E-Mail:" id="mail" onfocus="closeThisError(event)">
+                    <span class="hata">Bu alan boş geçilemez</span>
+                </div>
+
+                <div class="soyad-box">
+                    <input type="text" placeholder="Soyadınız:" id="soyad" onfocus="closeThisError(event)">
+                    <span class="hata">Bu alan boş geçilemez</span>
+                </div>
+
+                <div class="tel-box">
+                    <input type="text" placeholder="Telefon:" id="tel" onfocus="closeThisError(event)">
+                    <span class="hata">Bu alan boş geçilemez</span>
+                </div>
+
+                <div class="mesaj-box">
+                    <textarea placeholder="Mesajınız:" id="mesaj" onfocus="closeThisError(event)"></textarea>
+                    <span class="hata">Bu alan boş geçilemez</span>
+                </div>
+                
+                <button type="submit">Gönder</button>
 
             </form>
 
@@ -302,10 +321,6 @@
         </div>
 
     </div>
-
-
-
-
 
 
     <script src="./JS/jquery3.6.0.min.js"></script>
