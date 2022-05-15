@@ -1,0 +1,118 @@
+.Sigorta-Şirketleri {
+    height: 650px;
+}
+
+.Sigorta-Şirketleri .main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.Sigorta-Şirketleri .main-container .containers {
+    display: flex;
+    justify-content: center;
+}
+
+.Sigorta-Şirketleri .main-container .containers .container-item {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    box-shadow: 0px 5px 20px rgb(20, 47, 67, .2);
+    border-radius: 100%;
+
+    margin-right: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header-type-1 {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    padding: 40px 0;
+}
+
+@media (max-width:1150px) {
+
+    .header-type-1 {
+        font-size: 15px;
+    }
+
+    .Sigorta-Şirketleri {
+        max-width: 100%;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .Sigorta-Şirketleri .main-container {
+        flex-direction: row;
+        justify-content: space-between;
+
+        transform: translateX(0);
+
+        width: fit-content;
+
+        animation-name: SliderAnim;
+        animation-duration: 50s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        height: fit-content;
+        
+    }
+
+}
+
+@media (max-width:500px) {
+
+    .Sigorta-Şirketleri {
+        height: 200px;
+    }
+
+    .Sigorta-Şirketleri .main-container {
+
+        transform: translateX(0);
+        animation-name: SliderAnim2;
+        animation-duration: 30s;
+    }
+
+    .Sigorta-Şirketleri .main-container .containers .container-item  {
+
+        width: 45.59px;
+        height: 45.59px;
+
+        margin-right: 37px;
+        
+    }
+
+    .Sigorta-Şirketleri .main-container .containers .container-item img {
+        
+        width: 80%;
+
+    }
+
+}
+
+@media (min-width:1150px) {
+    .Sigorta-Şirketleri .main-container {
+        transform: unset !important;
+    }
+}
+
+
+@keyframes SliderAnim {
+    0% {transform: translateX(0);}
+
+    50% {transform: translateX(-2200px);}
+
+    100% {transform: translateX(0);}
+}
+
+@keyframes SliderAnim2 {
+    0% {transform: translateX(0);}
+
+    50% {transform: translateX(-800px);}
+
+    100% {transform: translateX(0);}
+}

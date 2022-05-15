@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/slider.css">
     <link rel="stylesheet" href="style/Hakkimizda.css">
     <link rel="stylesheet" href="style/bootstrap4.6.1.min.css">
     <link rel="stylesheet" href="style/slick1.8.1.css">
@@ -17,18 +19,494 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Hakkımızda</title>
 </head>
 <body>
     
 
+    <nav class="align-center">
+
+        <div class="container-1">
+            <h1 class="nav-header">Lorem<span>İP</span></h1>
+
+            <div class="container-2">
+
+                <a href="./Hakkimizda.html">Hakkımızda</a>
+                <a href="">Ürünlerimiz</a>
+                <a href="">S.S.S</a>
+                <a href="">Blog</a>
+                <a href="./iletisim.html">İletişim</a>
+                <span class="border-box">TR</span>
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </div>
+
+            <div class="menu" onclick="MenuClick()">
+                <div class="lines line-1"></div>
+                <div class="lines line-2"></div>
+                <div class="lines line-3"></div>
+            </div>
+
+
+        </div>
+
+        <div class="menu-container">
+
+            <a href="./Hakkimizda.html">Hakkımızda</a>
+            <span class="dropdown-1" onclick="MenuDropdownClick()">Ürünlerimiz<i class="fa-solid fa-angle-down"></i>
+
+                <div class="dropdown-container">
+
+                    <a href="">Trafik Sigortası</a>
+                    <a href="">Dask Sigortası</a>
+                    <a href="">Kasko Sigortası</a>
+                    <a href="">Sağlık Sigortası</a>
+
+                </div>
+
+            </span>
+            <a href="">S.S.S</a>
+            <a href="">Blog</a>
+            <a href="./iletisim.html">İletişim</a>
+
+        </div>
+
+    </nav>
+
+    <div class="header-Background">
+
+        <h1>HAKKIMIZDA</h1>
+
+    </div>
+
+    <div class="about-Us">
+
+        <div class="gray-bg">
+
+
+            <div class="box box-1 align-center">
+                
+                <div>
+    
+                    <h4>HAKKIMIZDA<div class="line"></div></h4>
+    
+                    <p>industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release</p>    
+    
+                </div>
+    
+                <img src="./img/Hakkimizda-img-1.png">
+    
+                <img class="bg-img" src="./img/bg-image.png" alt="">
+    
+                <button>Bize Ulaşın</button>
+    
+            </div>
+    
+        </div>
+    
+    
+        <div class="box box-2 align-center">
+            
+            <img src="./img/Hakkimizda-img-2.png">
+    
+            <div>
+    
+                <h4>MİSYON<div class="line"></div></h4>
+    
+                <p>industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release</p>    
+    
+                <button>Bize Ulaşın</button>
+    
+            </div>
+    
+    
+        </div>
+    
+        <div class="gray-bg">
+    
+    
+            <div class="box box-3 align-center">
+                
+                <div>
+    
+                    <h4>VİZYON<div class="line"></div></h4>
+    
+                    <p>industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release</p>    
+    
+                </div>
+    
+                <img src="./img/Hakkimizda-img-3.png">
+    
+                <img class="bg-img" src="./img/bg-image.png" alt="">
+    
+                <button>Bize Ulaşın</button>
+    
+            </div>
+    
+        </div>
+
+    </div>
+
+
+    <div class="ekibimiz align-center">
+
+        <h4>Ekibimiz <div class="line"></div></h4>
+
+        <div class="buttons">
+
+            <button id="all" class="btn-1 selected" onclick="buttonClicked(event)">Tümü</button>
+            <button id="management" class="btn-2" onclick="buttonClicked(event)">Yönetim</button>
+            <button id="contents" class="btn-3" onclick="buttonClicked(event)">İçerik</button>
+            <button id="design" class="btn-4" onclick="buttonClicked(event)">Tasarım</button>
+            <button id="software" class="btn-5" onclick="buttonClicked(event)">Yazılım</button>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card card-management show">
+
+                <img src="./img/İsmailHamulu.png">
+
+                <div class="contact">
+
+                    <a target="_blank" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a target="_blank" href=""><i class="fa-regular fa-envelope"></i></a>
+                    
+                </div>
+
+                <h6>İsmail Hamulu</h6>
+
+            </div>
+
+            <div class="card card-management show">
+
+                <img src="./img/BerkanSaraç.png">
+
+                <div class="contact">
+
+                    <a target="_blank" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a target="_blank" href=""><i class="fa-regular fa-envelope"></i></a>
+                    
+                </div>
+
+                <h6>İsmail Hamulu</h6>
+
+            </div>
+
+            <div class="card card-contents show">
+
+                <img src="./img/AslıBoz.png">
+
+                <div class="contact">
+
+                    <a target="_blank" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a target="_blank" href=""><i class="fa-regular fa-envelope"></i></a>
+                    
+                </div>
+
+                <h6>Aslı Boz</h6>
+
+            </div>
+
+            <div class="card card-design show">
+
+                <img src="./img/GürkanKolaoğlu.png">
+
+                <div class="contact">
+
+                    <a target="_blank" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a target="_blank" href=""><i class="fa-regular fa-envelope"></i></a>
+                    
+                </div>
+                
+                <h6>Gürkan Kolaoğlu</h6>
+
+            </div>
+
+            <div class="card card-design show">
+
+                <img src="./img/DoğanGüler.png">
+
+                <div class="contact">
+
+                    <a target="_blank" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a target="_blank" href=""><i class="fa-regular fa-envelope"></i></a>
+                    
+                </div>
+                
+                <h6>Doğan Güler</h6>
+
+            </div>
+
+            <div class="card card-design show">
+
+                <img src="./img/SamiOrçunYıldız.png">
+
+                <div class="contact">
+
+                    <a target="_blank" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a target="_blank" href=""><i class="fa-regular fa-envelope"></i></a>
+                    
+                </div>
+                
+                <h6>Sami Orçun Yıldız</h6>
+
+            </div>
+
+            <div class="card card-software show">
+
+                <img src="./img/Dursunİnel.png">
+
+                <div class="contact">
+
+                    <a target="_blank" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a target="_blank" href=""><i class="fa-regular fa-envelope"></i></a>
+                    
+                </div>
+                
+                <h6>Dursun İnel</h6>
+
+            </div>
+
+            <div class="card card-software show">
+
+                <img src="./img/MuhammetBakiAk.png">
+
+                <div class="contact">
+
+                    <a target="_blank" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a target="_blank" href=""><i class="fa-regular fa-envelope"></i></a>
+                    
+                </div>
+                
+                <h6>Muhammet Baki Ak</h6>
+
+            </div>
+
+            <div class="card card-software show">
+
+                <img src="./img/YılmazBatal.png">
+
+                <div class="contact">
+
+                    <a target="_blank" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a target="_blank" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a target="_blank" href=""><i class="fa-regular fa-envelope"></i></a>
+                    
+                </div>
+                
+                <h6>Yılmaz Batal</h6>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="Sigorta-Şirketleri align-center">
+
+        <h2 class="header-type-1">Anlaşmalı Sigorta Şirketleri</h2>
+
+
+        <div class="main-container" ontouchmove="touchMove(event)" ontouchstart="touchStart(event)" onmousedown="mouseDown()" onmouseup="mouseUp()" onmousemove="mouseMove(event)" >
+
+
+            <div class="containers container-1" draggable="false">
+
+                <div class="container-item">
+                    <img src="./img/Sigorta-Şirketi-1.png" draggable="false">
+                </div>
+    
+                <div class="container-item">
+                    <img src="./img/Sigorta-Şirketi-2.png" draggable="false">
+                </div>
+    
+                <div class="container-item">
+                    <img src="./img/Sigorta-Şirketi-3.png" draggable="false">
+                </div>
+    
+                <div class="container-item">
+                    <img src="./img/Sigorta-Şirketi-4.png" draggable="false">
+                </div>
+
+            </div>
+
+            <div class="containers container-2" draggable="false">
+
+                <div class="container-item">
+                    <img src="./img/Sigorta-Şirketi-5.png" draggable="false">
+                </div>
+    
+                <div class="container-item">
+                    <img src="./img/Sigorta-Şirketi-6.png" draggable="false">
+                </div>
+    
+                <div class="container-item">
+                    <img src="./img/Sigorta-Şirketi-7.png" draggable="false">
+                </div>
+    
+                <div class="container-item">
+                    <img src="./img/Sigorta-Şirketi-8.png" draggable="false">
+                </div>
+
+                <div class="container-item">
+                    <img src="./img/Sigorta-Şirketi-5.png" draggable="false">
+                </div>
+
+            </div>
+
+            <div class="containers container-3" draggable="false">
+
+                <div class="container-item">
+                    <img src="./img/Sigorta-Şirketi-10.png" draggable="false">
+                </div>
+
+                <div class="container-item">
+                    <img src="./img/Sigorta-Şirketi-2.png" draggable="false">
+                </div>
+
+                <div class="container-item">
+                    <img src="./img/Sigorta-Şirketi-11.png" draggable="false">
+                </div>
+
+                <div class="container-item">
+                    <img src="./img/Sigorta-Şirketi-12.png" draggable="false">
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer">
+
+        <div class="E-bülten">
+
+            <div class="container-1 align-center">
+
+                <div class="texts"> 
+
+                    <h5>E-Bülten</h5>
+
+                    <p>Ürünlerimizden ve Kampanyalarımızdan mail üzerinden haberdar olabilirsiniz.</p>
+
+                </div>
+
+                <form autocomplete="off">
+
+                    <input type="email" id="email" placeholder="E-Mail:">
+                    <button type="submit">Gönder</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="footer-center">
+
+            <div class="container-1 align-center"> 
+
+                <ul class="border-1">
+                    <li><h5>Biz Kimiz?</h5></li>
+
+                    <li><a href="">Hakkımızda</a></li>
+                    <li><a href="">İletişim</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">S.S.S</a></li>
+                </ul>
+
+                <ul class="border-1">
+                    <li><h5>Ürünlerimiz</h5></li>
+
+                    <li><a href="">Trafik Sigortası</a></li>
+                    <li><a href="">Kasko Sigortası</a></li>
+                    <li><a href="">Sağlık Sigortası</a></li>
+                    <li><a href="">Deprem Sigortası</a></li>
+                </ul>
+
+                <ul>
+                    <li><h5>Çerezler</h5></li>
+
+                    <li><a href="">Ürünlerimiz</a></li>
+                    <li><a href="">İletişim</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">S.S.S</a></li>
+                </ul>
+
+                <div class="map-and-icons">
+
+                    <img src="./img/infowindow.png" class="map" alt="map">
+
+                    <div class="icons">
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a> 
+                        <a href=""><i class="fa-brands fa-instagram"></i></a> 
+                        <a href=""><i class="fa-brands fa-twitter"></i></a> 
+                        <a href=""><i class="fa-brands fa-linkedin-in"></i></a> 
+                    </div>
+
+                </div>
+
+                <ul class="iletişim-Bilgileri">
+
+                    <li><h5>İletişim Bilgileri</h5></li>
+
+                    <li><i class="fa-solid fa-envelope"></i> <a href="mailto: acerpro@acerpro.com">acerpro@acerpro.com</a></li>
+                    <li><i class="fa-solid fa-phone"></i> <a href="Tel: +905531878855">+90 553 187 88 55</a></li>
+                    <li><i class="fa-solid fa-envelope"></i> <a href="https://goo.gl/maps/ZQJJtVVUbWcGfbzz8" target="blank">180 sk. Ayazağa mah. Sarıyer/İstanbul</a></li>
+
+                </ul>
+                
+                
+
+
+            </div>
 
 
 
+        </div>
 
+        <div class="footer-bottom">
+
+            <p>Powered by DigiMondi Designed by BacTERRY</p>
+
+        </div>
+
+    </div>
 
 
     <script src="./JS/jquery3.6.0.min.js"></script>
@@ -38,6 +516,8 @@
     <script src="./JS/popper1.16.1.min.js"></script>
     <script src="./JS/bootstrap4.6.1.min.js"></script>
     <script src="./JS/aos2.3.1.js"></script>
+    <script src="./JS/nav.js"></script>
+    <script src="./JS/slider.js"></script>
     <script src="./JS/Hakkimizda.js"></script>
 
 </body>
