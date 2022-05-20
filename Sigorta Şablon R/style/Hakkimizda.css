@@ -276,6 +276,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .ekibimiz .cards .card.show {
@@ -330,6 +331,32 @@ button {
 
 .ekibimiz .cards .card .contact *:hover {
     opacity: 1;
+}
+
+.ekibimiz .cards .card .card-icon {
+    position: absolute;
+    top: -20px;
+    left: -15px;
+    font-size: 35px;
+    border-radius: 40px;
+    padding: 20px;
+    color: white;
+}
+
+.ekibimiz .cards .card-management .card-icon {
+    background-color: #E83794;
+}
+
+.ekibimiz .cards .card-contents .card-icon {
+    background-color: #824394;
+}
+
+.ekibimiz .cards .card-design .card-icon {
+    background-color: #6639A6;
+}
+
+.ekibimiz .cards .card-software .card-icon {
+    background-color: #AA2B6E;
 }
 
 @media (max-width:1279px) {
