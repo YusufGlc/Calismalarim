@@ -416,6 +416,13 @@ button {
         font-size: 15px;
     }
 
+    .ekibimiz .cards .card .card-icon {
+
+        font-size: 18px;
+        padding: 15px;
+        top: 0;
+    }
+
 }
 
 @media (max-width:450px) {
@@ -467,6 +474,14 @@ button {
 
     .ekibimiz .cards .card:hover .contact * {
         font-size: 10px;
+    }
+
+    .ekibimiz .cards .card .card-icon {
+
+        font-size: 15px;
+        padding: 10px;
+        top: 0;
+
     }
 
 }
