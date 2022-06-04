@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        img {
+            width: 100%;
+            
+        }
+
+        h1 {
+            margin-bottom: 100px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+
+
+
+
+
+
+    <script>
+
+        var haberler;
+
+        const xhr = new XMLHttpRequest();
+
+        xhr.open("GET","https://cors-anywhere.herokuapp.com/http://mrevyap.k12.tr/mob_uygulama/haberler.php",true);
+        
+        xhr.onload = function() {
+            
+
+
+            haberler = JSON.parse(xhr.responseText);
+
+            haberler.forEach(element => {
+                
+                let resim = document.createElement("img");
+
+                resim.setAttribute("src",element.resim);
+
+                document.body.append(resim);
+
+                let title = document.createElement("h1");
+
+                title.textContent = element.baslik;
+
+                document.body.append(title);
+
+
+            });
+
+        }
+
+        xhr.send();
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
