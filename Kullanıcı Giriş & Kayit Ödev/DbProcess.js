@@ -16,7 +16,7 @@ class DbProcess {
 
         let donecek = null;
 
-        xhr.onload = function(e) {
+        xhr.onload = function() {
             if (xhr.status == 200) {
                 donecek = true;
                 return
@@ -40,7 +40,7 @@ class DbProcess {
 
         let donecek = null;
 
-        xhr.onload = function(e) {
+        xhr.onload = function() {
             if (xhr.status == 200) {
                 donecek = true;
                 return
@@ -64,7 +64,7 @@ class DbProcess {
 
         let donecek = null;
 
-        xhr.onload = function(e) {
+        xhr.onload = function() {
             if (xhr.status == 200) {
                 donecek = JSON.parse(xhr.response).idToken;
             }
@@ -85,7 +85,7 @@ class DbProcess {
 
         let donecek = null;
 
-        xhr.onload = function(e) {
+        xhr.onload = function() {
             if (xhr.status == 200) {
                 donecek = true;
                 return
@@ -99,5 +99,53 @@ class DbProcess {
         return donecek;
 
     }
+
+
+    sendEmailVerify = function(id) {
+        
+        let xhr = new XMLHttpRequest();
+
+        xhr.open("POST",`https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=${this.apiKey}&requestType=VERIFY_EMAIL&idToken=${id}`,false)
+
+        let gonderildimi = null;
+
+        xhr.onload = function() {
+            if (xhr.status == 200) {
+                gonderildimi = true;
+                return
+            }
+
+            gonderildimi = false;
+        }
+
+        xhr.send();
+
+        return gonderildimi;
+    }
+
+    verifiedEmail = function(id) {
+        let xhr = new XMLHttpRequest();
+
+        xhr.open("POST",`https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=${this.apiKey}&idToken=${id}`,false)
+
+        let donecek = null;
+
+        xhr.onload = function() {
+            console.log(JSON.parse(xhr.response).users[0].emailVerified)
+            if (xhr.status == 200) {
+                
+                donecek = JSON.parse(xhr.response).users[0].emailVerified;
+                return 
+            }
+
+            donecek = false;
+        }
+
+        xhr.send();
+
+        return donecek;
+
+    }
+
 
 }
