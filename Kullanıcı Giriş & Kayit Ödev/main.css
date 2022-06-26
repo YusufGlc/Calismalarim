@@ -1,0 +1,38 @@
+
+body {
+    margin: 0;
+}
+
+.form-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 20px 0;
+}
+
+form input {
+    height: 40px;
+    border-radius: 30px;
+    border:none;
+    box-shadow: 0 5px 20px gray;
+    outline: none;
+    padding: 0 15px;
+}
+
+form button {
+    height: 40px;
+    border-radius: 30px;
+    background-color: rgb(0, 31, 167);
+    border: none;
+    cursor: pointer;
+    color: white;
+}
