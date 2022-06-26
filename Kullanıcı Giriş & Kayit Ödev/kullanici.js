@@ -4,7 +4,22 @@ if (localStorage.getItem("email") == null && localStorage.getItem("passwd") == n
 
 document.querySelector(".title").textContent += localStorage.getItem("email").split("@")[0];
 
+let mesaj = document.getElementById("mesaj");
+
 let db = new DbProcess("AIzaSyA1wm3YInpmO7XWPD-a1mLBIsU6gnRkpCE");
+
+
+document.getElementById("şifreDeğiş").addEventListener("click",function() {
+    
+    if (db.changeUserPassword(localStorage.getItem("email"))) {
+        mesaj.textContent = "Maile şifre değiştirme linki gönderildi";
+    }
+    else {
+        mesaj.textContent = "Şifre Değiştirme maili gönderilemedi";
+    }
+
+})
+
 
 document.getElementById("hesapSil").addEventListener("click",function() {
     
@@ -16,9 +31,6 @@ document.getElementById("hesapSil").addEventListener("click",function() {
             localStorage.removeItem("passwd");
             window.location.href = "giris.html";
         }
-
-    }
-    else {
 
     }
 

@@ -147,5 +147,29 @@ class DbProcess {
 
     }
 
+    changeUserPassword = function(email) {
+        
+        let xhr = new XMLHttpRequest();
+
+        xhr.open("POST",`https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=${this.apiKey}&requestType=PASSWORD_RESET&email=${email}`,false)
+
+        let donecek = null;
+
+        xhr.onload = function() {
+            if (xhr.status == 200) {
+                
+                donecek = true;
+                return 
+            }
+
+            donecek = false;
+        }
+
+        xhr.send();
+
+        return donecek;
+
+    }
+
 
 }
